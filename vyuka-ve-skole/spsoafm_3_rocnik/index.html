@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+    <!-- SEO -->
+    <title>SPŠOA - F-M | 3 | SSH Server / Client</title>
+    <meta name="description" content="SPŠOA - F-M | 3 | SSH Server / Client">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><img src="static/images/tux-tutor.png" style="float: left; margin-right: 20px; height: 50px"></p>
+        <p><h3>SPŠOA - F-M | 3 | SSH Server / Client</h3></p>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="horizontal">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section>
+         <span class="background" style="background-image:url('static/images/tux.jpg')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter" style="color: white">
+            <h1><strong>SSH Server / Client</strong></h1>
+            <h2>OPERAČNÍ SYSTÉMY GNU/LINUX</h2>
+          </div>
+          <!-- .end .wrap -->
+          <footer class="bg-trans-light">
+            <div class="wrap">
+              <p>
+                <span class="alignright" style="color: white">
+                    &copy; Ondrej Lipina | <a href="TietoEvry.com" target="_blank">TietoEvry.com</a>
+                </span>
+              </p>
+            </div>
+          </footer>
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+          <h3 class="slide-top">Table of Contents</h3>
+          <hr>
+            <div class="toc">
+              <ol>
+                <li>
+                  <a href="#slide=3" title="Go to Installation of SSH server and client">
+                  <span class="chapter">Installation of SSH server and client</span>
+                  <span class="toc-page">03</span>
+                  </a>
+                </li>
+                <li><a href="#slide=5" title="Go to Configuration"><span class="chapter">Configuration</span>
+                  <span class="toc-page">05</span></a>
+                  <ol>
+                    <li><a href="#slide=5" title="Go to SSH server config files"><span class="chapter">SSH server config files</span>
+                      <span class="toc-page">05</span></a>
+                    </li>
+                    <li><a href="#slide=06" title="Go to SSH client config files"><span class="chapter">SSH client config files</span>
+                      <span class="toc-page">06</span></a>
+                    </li> 
+                  </ol>
+                </li>
+                <li>
+                  <a href="#slide=07" title="Go to SSH key-based authentication"><span class="chapter">SSH key-based authentication</span>
+                  <span class="toc-page">07</span></a>
+                  <ol>
+                    <li><a href="#slide=07" title="Go to SSH key-pair"><span class="chapter">SSH key-pair</span>
+                      <span class="toc-page">07</span></a>
+                    </li>
+                    <li><a href="#slide=8" title="Go to Public key, authorized_keys, permissions"><span class="chapter">Public key, authorized_keys, permissions</span>
+                      <span class="toc-page">08</span></a>
+                    </li>   
+                    <li><a href="#slide=9" title="Go to SUDO"><span class="chapter">SUDO</span>
+                      <span class="toc-page">09</span></a>
+                    </li>
+                    <li><a href="#slide=10" title="Go to SSH Agent"><span class="chapter">SSH Agent</span>
+                      <span class="toc-page">10</span></a>
+                    </li>    
+                  </ol>
+                </li>
+                <li><a href="#slide=11" title="Go to Practice"><span class="chapter">Practice</span>
+                  <span class="toc-page">11</span></a>
+                  <ol>
+                  	<li><a href="#slide=12" title="Go to Install OpenSSH"><span class="chapter">Install OpenSSH</span>
+                  	  <span class="toc-page">12</span></a>
+                  	</li>                      	
+                    <li><a href="#slide=13" title="Go to Create user, sudo access"><span class="chapter">Create user, sudo access</span>
+                      <span class="toc-page">13</span></a>
+                    </li>                  	
+                    <li><a href="#slide=14" title="Go to Generate SSH keys and upload to server"><span class="chapter">Generate SSH keys and upload to server</span>
+                      <span class="toc-page">14</span></a>
+                    </li>
+                    <li><a href="#slide=15" title="Go to Secure SSH server"><span class="chapter">Secure SSH server</span>
+                      <span class="toc-page">15</span></a>
+                    </li>
+                    <li><a href="#slide=16" title="Go to Use SSH-AGENT"><span class="chapter">Use SSH-AGENT</span>
+                      <span class="toc-page">16</span></a>
+                    </li>     
+                  </ol>
+                </li> 
+                <li><a href="#slide=17" title="Go to Lab"><span class="chapter">Lab</span>
+                  <span class="toc-page">17</span></a>
+                </li>      
+                <li><a href="#slide=18" title="Go to Links"><span class="chapter">Links</span>
+                  <span class="toc-page">18</span></a>
+                </li>                                
+              </ol>
+            </div>
+            <!-- end .toc -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>1. Installation of SSH server and client</h3>
+            <h4>OpenSSH</h4>
+           	<p>OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks. In addition, OpenSSH provides a large suite of secure tunneling capabilities, several authentication methods, and sophisticated configuration options.</p><p>
+
+The OpenSSH suite consists of the following tools:
+<ul>
+<li>Remote operations are done using ssh, scp, and sftp.</li>
+<li>Key management with ssh-add, ssh-keysign, ssh-keyscan, and ssh-keygen.</li>
+<li>The service side consists of sshd, sftp-server, and ssh-agent.</li>
+</ul>
+</p>
+<p>OpenSSH is developed by a few developers of the OpenBSD Project and made available under a BSD-style license.</p>
+<p>OpenSSH is incorporated into many commercial products, but very few of those companies assist OpenSSH with funding.</p>
+<p>Contributions towards OpenSSH can be sent to the OpenBSD Foundation.</p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Installation of SSH server and client</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>1. Installation of SSH server and client</h3>
+           	<p><h5>Install open ssh server</h5>
+           		<pre>apt-get install openssh-server</pre>
+           	</p>
+           	<p><h5>Install open ssh client</h5>
+           		<pre>apt-get install openssh-client</pre>
+           	</p>
+           	<p><h5>Enable and start ssh daemon</h5>
+           		<pre>systemctl enable sshd; systemctl start sshd </pre>
+           	</p>
+           	<p><h5>Check if server is listening on port 22</h5>
+           		<pre>ss -natup | grep 22 </pre>
+           	</p>           	 
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Installation of SSH server and client</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>2. Configuration</h3>
+            <h4>SSH server config files</h4>
+			<div class="grid">
+				<div class="column">
+					<table>
+						<tr>
+							<td>Configuration file:</td>
+							<td><code>/etc/ssh/sshd_config</code></td>
+						</tr>
+						<tr>
+							<td>Log files:</td>
+							<td><code>/var/log/auth.log</code><br><code>lastlog</code></td>
+						</tr>
+					</table>
+				</div>
+				<div class="column">
+					<pre style="height: 600px; overflow: scroll;">#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Authentication:
+
+#LoginGraceTime 2m
+#PermitRootLogin prohibit-password
+#StrictModes yes
+#MaxAuthTries 6
+#MaxSessions 10
+
+#PubkeyAuthentication yes
+
+# Expect .ssh/authorized_keys2 to be disregarded by default in future.
+#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
+
+
+# For this to work you will also need host keys in /etc/ssh/ssh_known_hosts
+#HostbasedAuthentication no
+# Change to yes if you don't trust ~/.ssh/known_hosts for
+# HostbasedAuthentication
+#IgnoreUserKnownHosts no
+# Don't read the user's ~/.rhosts and ~/.shosts files
+#IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+#PasswordAuthentication yes
+#PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+ChallengeResponseAuthentication no
+
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /var/run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+# no default banner path
+#Banner none
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+
+# Example of overriding settings on a per-user basis
+#Match User anoncvs
+#	X11Forwarding no
+#	AllowTcpForwarding no
+#	PermitTTY no
+#	ForceCommand cvs server
+</pre>
+				</div>
+			</div>          	 
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Installation of SSH server and client</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>2. Configuration</h3>
+            <h4>SSH client configuration files</h4>
+			<div class="grid">
+				<div class="column">
+					<table>
+						<tr>
+							<td>Configuration file:</td>
+							<td><code>/etc/ssh/ssh_config</code></td>
+						</tr>
+					</table>
+				</div>
+				<div class="column">
+					<pre style="height: 600px; overflow: scroll;">Host *
+#   ForwardAgent no
+#   ForwardX11 no
+#   ForwardX11Trusted yes
+#   PasswordAuthentication yes
+#   HostbasedAuthentication no
+#   GSSAPIAuthentication no
+#   GSSAPIDelegateCredentials no
+#   GSSAPIKeyExchange no
+#   GSSAPITrustDNS no
+#   BatchMode no
+#   CheckHostIP yes
+#   AddressFamily any
+#   ConnectTimeout 0
+#   StrictHostKeyChecking ask
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentityFile ~/.ssh/id_dsa
+#   IdentityFile ~/.ssh/id_ecdsa
+#   IdentityFile ~/.ssh/id_ed25519
+#   Port 22
+#   Protocol 2
+#   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+#   MACs hmac-md5,hmac-sha1,umac-64@openssh.com
+#   EscapeChar ~
+#   Tunnel no
+#   TunnelDevice any:any
+#   PermitLocalCommand no
+#   VisualHostKey no
+#   ProxyCommand ssh -q -W %h:%p gateway.example.com
+#   RekeyLimit 1G 1h
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+
+</pre>
+				</div>
+			</div>          	 
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Installation of SSH server and client</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>3. SSH key-based authentication</h3>
+            <h4>3.1 SSH key pair</h4>
+			<p>Users can authenticate <strong>ssh</strong> logins without password by using public key authentication. Ssh allows user to authenticate using a private-public key scheme. This means that two keys are generated, a private key and a public key. The private key file is used as the authentication credential, and like password, must be kept secret and secure. The public key is copied to system the user wants to log into, and is used to verify the private key. The public key does not need to be secret. An SSH server that has the public key can issue a challenge that can only be answered by a system holding your private key. As result, you can authenticate using the presence of your key. This allows you to access systems in a way that doesn't require typing a password every time, however is still secure.</p>
+			<p> Key generation is done using the <code>ssh-keygen</code> command. 
+			<pre>$ ssh-keygen
+~/.ssh/id_rsa  #private
+~/.ssh/id_rsa.pub  #public</pre>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >3. SSH key-based authentication</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>3. SSH key-based authentication</h3>
+            <h4>3.2 Public key, authorized_keys, permissions</h4>
+			<p>The public key is actually a fingerprint of private key. The public key can be copied to target server via <code>ssh-copy-id</code> command. It will put it into <code>~/.ssh/authorized_keys</code> file and setup correct permissions automatically.</p>
+			<h5>Example of copying the public key file</h5>
+			<pre>$ ssh-copy-id -i ~/.ssh/id_rsa.pub user@server.example.com</pre><br>
+			<h5>Permissions of <code>~/.ssh/authorized_keys</code> needs to be set as follows</h5>
+<pre>file                    owner   group        Perms
+~/.ssh/authorized_keys  &lt;user>  &lt;usergroup>  0600</pre>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >3. SSH key-based authentication</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>3. SSH key-based authentication</h3>
+            <h4>3.3 sudo</h4>
+			<p>Sudo (su "do") allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments.</p>
+			<h5>Main config file</h5>
+			<pre>/etc/sudoers</pre><br>
+			<h5>In real world the <code>/etc/sudoers.d</code> folder is used to store configuration files per user or group.</h5>
+			Example:
+<pre>$ cat /etc/sudoers.d/user
+user	ALL=(ALL:ALL)	ALL</pre>
+<p>Note: For modifying <code>/etc/sudoers</code> file <strong>ALWAYS</strong> use <code>visudo</code> command. It check syntax errors. The reason is simple: if you do a typo in <code>/etc/sudoers</code> file, you can cut yourself (or all) from the server.</p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >3. SSH key-based authentication</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>3. SSH key-based authentication</h3>
+            <h4>3.4 SSH-AGENT</h4>
+			<p>The ssh-agent is a helper program that keeps track of user's identity keys and their passphrases. The agent can then use the keys to log into other servers without having the user type in a password or passphrase again. This implements a form of single sign-on (SSO). A <code>ssh-agent</code> is part of <code>openssh-client</code> package. <a href="https://www.ssh.com/ssh/agent">https://www.ssh.com/ssh/agent</a></p>
+			<h5>Run <code>ssh-agent</code></h5>
+			<pre>$ eval 'ssh-agent'
+SSH_AUTH_SOCK=/tmp/ssh-rvW2Gy2mFa7l/agent.1353; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=1354; export SSH_AGENT_PID;
+echo Agent pid 1354;</pre>
+			Copy and paste all 3 lines to cmdline<br><br>
+			<h5>Add your key</h5>
+			<pre>ssh-add</pre>
+			<h5>List your keys</h5>
+			<pre>$ ssh-add -l
+2048 SHA256:MZGdDSwjfR6FSQyUsyarJV1bwnuq2ZD0P/owUdwj5tM ondrej@router (RSA)
+</pre>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >3. SSH key-based authentication</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <p>In this practical example we will create ssh-key based authentication for user <code>triss</code> between <code>router</code> and <code>student</code> machines.</p>
+            <p>
+            	<ul>The <code>router</code> machine will play client:
+            		<li>ssh client</li>
+            		<li>private key stored</li>
+            		<li>ssh-agent configured</li>
+            	</ul>
+            	<br>
+            	<ul>The <code>student</code> machine will play server:
+            		<li>ssh server</li>
+            		<li>public key stored</li>
+            		<li>sudo access for user granted</li>
+            		<li>SSH configuration secured</li>
+            	</ul>
+            </p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <h4>4.1 Install OpenSSH</h4>
+            <ol>
+            	<li>Install <code>openssh-server</code> and <code>openssh-client</code> on both systems. 
+            		<pre>apt-get install openssh-server openssh-client</pre>
+            	</li>
+	           	<li>On <code>student</code> enable and start ssh daemon 
+	           		<pre>systemctl enable sshd; systemctl start sshd </pre>
+	           	</li>
+	           	<li>On <code>student</code> Check if server is listening on port 22
+	           		<pre>ss -natup | grep 22 </pre>
+	           	</li> 
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <h4>4.2 Create user, sudo access</h4>
+            <ol>
+            	<li>On both systems (<code>router, student</code>) create user <code>triss</code>. 
+            		<pre>adduser -c "Triss Marigold" triss</pre>
+            	</li>
+	           	<li>Only on <code>student</code> give user <code>triss</code> sudo access
+	           		<pre>echo 'triss	ALL=(ALL:ALL)	ALL' > /etc/sudoers.d/triss</pre>
+	           	</li> 
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <h4>4.3 Generate SSH keys and upload to server</h4>
+            <ol>
+            	<li>Only on <code>router</code> as user <code>triss</code> generate ssh key-pair</code>. 
+            		<pre>root@router:~# su - triss
+triss@router:~# ssh-keygen -b 4096 -t rsa -C "ssh key for triss"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): triss
+Enter same passphrase again: triss
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+</pre>
+            	</li>
+	           	<li>Copy public key to <code>student</code>
+	           		<pre>triss@router:~# ssh-copy-id triss@192.168.2.2</pre>
+	           	</li>
+	           	<li>Test if you are able to ssh to <code>student</code>
+	           		<pre>triss@router:~# ssh 192.168.2.2</pre>
+	           	</li> 
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+       <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <h4>4.4 Secure SSH server</h4>
+            <ol>
+            	<li>Only on <code>student</code> change following options in <code>/etc/ssh/sshd_config</code>:</code>. 
+            		<pre>PermitRootLogin no
+PubkeyAuthentication yes
+X11Forwarding no
+Match user triss
+	PasswordAuthentication no
+	PermitTTY no
+	AllowTcpForwarding no</pre>
+	           	</li> 
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+       <section>
+          <div class="wrap">
+            <h3>4. Practice</h3>
+            <h4>4.5 Use ssh-agent</h4>
+            <ol>
+            	<li>On <code>router</code> machine install <code>keychain</code> tool</code>. 
+            		<pre>root@router:~# apt-get install keychain</pre>
+	           	</li>
+            	<li>On <code>router</code> switch to user <code>triss</code> and add this lines to <code>~/.bashrc</code> file. 
+            		<pre>#SSH-AGENT
+eval $(keychain --eval id_rsa)
+</pre>
+	           	</li>
+	           	<li>Still as user <code>triss</code> load again <code>.bashrc</code> file.
+	           		<pre>triss@router:~# source .bashrc</pre>
+	           	</li> 
+	           	<li>Still as user <code>triss</code> list the key
+	           		<pre>triss@router:~# ssh-add -l</pre>
+	           	</li>
+	           	<li>Test the passwordless connection
+	           		<pre>triss@router:~# ssh 192.168.2.2</pre>
+	           	</li>  
+            </ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >4. Practice</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+       <section>
+          <div class="wrap">
+            <h3>5. Lab</h3>
+            <h4>Setup ssh-key based authentication for user <code>ciri</code></h4>
+            <p>Setup ssh-key based authentication for user <code>ciri</code> from <code>router</code> to <code>student</code>.</p>
+            <p>
+            	<ul>Objectives:
+            		<li>User: <code>ciri</code>, password:<code>geralt</code>, key passphrase: <code>geralt</code> </li>
+            		<li>Give user <code>ciri</code> sudo access on <code>student</code></li>
+            		<li>setup ssh-agent for user <code>ciri</code> on <code>router</code></li>
+            	</ul>
+
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >5. Lab</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+       <section>
+          <div class="wrap">
+            <h3>6. Links</h3>
+            <p>
+            	<table>
+            		<tr>
+            			<td>OpenSSH</td>
+            			<td><a href="https://www.openssh.com/">https://www.openssh.com/</a></td>
+            		</tr>
+            		<tr>
+            			<td>sudo</td>
+            			<td><a href="https://www.sudo.ws/">https://www.openssh.com/</a></td>
+            		</tr>
+            		<tr>
+            			<td>ssh-agent</td>
+            			<td><a href="https://www.ssh.com/ssh/agent">https://www.ssh.com/ssh/agent</a></td>
+            		</tr>
+            		<tr>
+            			<td>keychain</td>
+            			<td><a href="https://linux.die.net/man/1/keychain">https://linux.die.net/man/1/keychain</a></td>
+            		</tr>
+            	</table>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >6. Links</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section class="slide-bottom">
+          <div class="wrap">
+            <div class="content-right text-serif">
+              <h2>
+                <strong>Thanks.</strong>
+                <a target="_blank" title="Share on Twitter" href="https://twitter.com/intent/tweet?text=Finally,%20everything%20you%20need%20to%20make%20HTML%20presentations%20in%20a%20fast/beautiful%20way.%20@WebSlides%20=%20Good%20karma%20&mdash;%20https://webslides.tv">
+                  <svg class="fa-twitter">
+                    <use xlink:href="#fa-twitter"></use>
+                  </svg>
+                </a>
+              </h2>
+              <p><strong>Ondrej Lipina</strong><br>Senior Service Architect</p> 
+              <p><br> <a href="mailto:ondrej.lipina@tieto.com">ondrej.lipina@tieto.com</a><br><a href="https://www.tietoevry.com/">https://www.tietoevry.com/</a></p>
+            </div>
+            <!-- .end .content-right -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>

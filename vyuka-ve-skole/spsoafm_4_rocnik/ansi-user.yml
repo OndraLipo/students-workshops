@@ -1,0 +1,28 @@
+---
+  - name: Create ansi user
+    hosts: webservers
+    become: yes
+
+    tasks:
+      - name: Generate password for user ansi
+        user:
+          name: ansi
+          state: present
+          password: '$6$fT.Upsnn9LWs8mdz$MhKHTy7Nmqknem6XfjdVHv59t9SRJwJBXtIrRJA24QJ.BFEQNHdxMZ7mVWhvPUu7HMGLH8OcHhGMsbM3C5lFO.'
+          #groups: wheel
+          #append: yes
+
+      - name: Add public key to authorized_keys
+        authorized_key:
+          user: ansi
+          state: present
+          key: "{{ lookup('file', '/home/ansi/.ssh/id_rsa.pub') }}"
+      
+      - name: Configure sudo
+        template:
+          src: /home/ansi/ansible/templates/sudoers-ansi
+          dest: /etc/sudoers.d/ansi
+          owner: root
+          group: root
+          mode: '0440'
+          validate: /usr/sbin/visudo -cf %s

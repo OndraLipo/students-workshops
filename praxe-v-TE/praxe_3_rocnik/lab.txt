@@ -1,0 +1,100 @@
+    5. OS Configuration Lab (*also in Final Lab)
+        1. Create Virtual Machine*
+        2. Change hostname*
+        3. Change IP, GW and DNS*
+        4. Create two users*
+        5. Add sudo to first user and try it*
+        6. Restrict ssh login into root user account*
+        7. Log into server via ssh*
+        8. Add date to history of commands*
+        9. Create folders/files scructure with content:
+
+        /rootfolder/
+            /folder01/
+                file01
+                file02
+            /folder02/
+                file03
+                /folder03/
+                    file04
+
+        all files contains:
+
+        content
+        text
+        content
+
+        10. Use recrusive grep trought this scructure with: "text"
+        11. Create new home folder, change it for second user and change it's ownership/rights*
+        12. Add acl right to this home folder to first user*
+        13. Attacht os installation dvd to Virtual Machine and mount it to folder /repo*
+        14. Install mysql or apache
+        15. Check local fw and open port for mysql or apache
+        16. List history of commands and create with it file /tmp/history.txt*
+        17. with scp, download to your local machine /tmp/history.txt file*
+
+    7. OS diagnostics/troubleshooting
+        1. List all filesystems
+        2. List only var filesystem
+        3. Find the bigger folder on the server with disk usage commands
+        4. Find folder which has the most files
+        5. Add disk to virtual machine 10GB, create 2 primary partition 5GB and 5GB, extend root volume group and extend root filesystem by 5GB
+        6. Extend swap 5GB with second partition
+        7. start new sar monitoring with 10000x/1minute to /var/log/sar.out
+        8. create new logrotate config for this sar file
+        9. try find out most cpu consume app and kill it
+        10. check swap status
+        11. try find out why "customer" can not log into user "customer"
+
+        12. check connection to NTP server and DNS
+        13. ping to default GW
+        14. why service sshd doesn't work?
+
+        15. List history of commands and create with it file /tmp/history2.txt
+        16. with scp, download to your local machine /tmp/history2.txt file
+
+
+    8. OS patching
+        1. do security patching
+        2. do full patching with exclude sshd
+        3. patch only sshd
+        4. check yum history
+        5. clear cache of yum
+        6. List history of commands and create with it file /tmp/history2.txt
+        7. with scp, download to your local machine /tmp/history2.txt file
+
+10. Final Lab/Test
+    10.1. Create 2nd Virtual Machine 
+        1. 1 vCPU
+        2. 1 GB RAM
+        3. 20 GB disk, 5 GB disk
+        4. 1 Network card with “Host Network only”
+    10.2. Install RHEL 8
+        1. Install type: Server
+        2. Disk partitioning
+            1. /boot 	1G 	standard partition
+            2. swap	1G 	LVM	rhel-swap
+            3. /home	5G	LVM	ext4	rhel-home
+            4. /	13G	LVM	xfs	rhel-root	
+    10.3. Configure 2 repositories from CDROM
+        1. BaseOS
+        2. AppStream
+    10.4. Configuration
+        1. Set hostname to: server1.tieto-test.local
+        2. Set IP address in same subnet as Host Network
+            3. Set also GW
+            4. Change DNS server to 8.8.8.8
+        5. Deny root login via SSH
+    10.5. User Management
+        1. Create users:
+            1. username: adam, password: adam123, user should have root privileges
+            2. username: pepa, password: pepa123, group: students, user is locked
+            2. Create folder /students owned by group students
+            3. Group students has all privileged to folder /students
+            4. Others has no permissions on folder /students
+    10.6. Disk management
+        1. Create new Volume Group on 2nd disk called vgdata
+        2. Create new Logical Volume with 2GB size in vgdata, name: lvdata, create ext4 filesystem and mount it persistently to /lvdata folder.
+    10.7. Others
+        1. Find larger files then 100KB in /var/log and copy them to /root/logs folder.
+        2. Install nginx web server and ensure it’s running and automatically started after reboot and content is accessible from outside.

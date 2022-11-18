@@ -1,0 +1,135 @@
+Vyuziti linuxoveho serveru v praxi
+
+TietoEvry co dela, na co pouzivame linux.
+
+typy serveru - cloud, hw, virt
+Use case lin/win
+Instalace
+Proc si vybrat linux
+AD, ldap, 
+vyhody, graficky rezim, text console
+typy OS, distribuce
+DevOps
+terraform
+
+prakticka ukazka - 
+Ansible - klon masiny, instalace z kickstartu, instalace AWX pomoci playbooku
+
+Up to 60 min.
+1 seance
+
+3. 2. 8:20 - 9:20
+
+Preza:
+--------
+1. Neco o mne, o firme, teamu
+
+TietoEvry https://www.tietoevry.com/cz/
+
+Me
+2 roky v TE
+5 let v OKIN BPS
+10+ let Praxe s UNIXem
+
+Team
+Server Management Linux Operations
+ - spravujeme cca 7000 UNIXových serverů
+ 	- 80% RedHat, SUSE, (Oracle Linux)
+ 	- 20% HP-UX, Solaris, AIX
+
+Co je to Linuxovy server?
+https://wiki.li-on.cz/academy/linux/linux-workshop-1/1-hw-overview
+*NIX overview
+https://wiki.li-on.cz/academy/linux/linux-workshop-1/2-nix-systems-overview
+Co se da na linuxovem serveru postavit?
+!- Webový server (apache, nginx)
+!- Databázový server (Oracle, Mysql, DB2, MariaDB, psql)
+!- Aplikační server (php, java, python, C++)
+!- Síťově úložiště (NFS, SAMBA)
+- DNS server
+- Kontejnérový host (docker, podman)
+- Virtualizační host (KVM, XEN)
+- Vývojové prostředí (Vagrant)
+- Síťový prvek (router, firewall)
+- Automatizační nástroj (Ansible, Salt)
+
+V čem je lepší Windows server?
+- Doménový řadič
+- Active Directory (ldap)
+- GPO
+
+
+2. Prakticka ukazka 20 min
+3. 
+
+CHG0000255485
+
+commandy:
+-----------------
+/kvm/install/hostnames.txt:
+sp-awx-web01
+sp-awx-web02
+sp-awx-db
+sp-awx-haproxy
+
+Create disk images (single):
+-----------------------------
+virt-builder centos-7.8 -o /kvm/disks/sp-awx-web01.qcow2 --size 50G --format qcow2 --hostname awx-web01 --root-password password:redhat --firstboot-command 'useradd -m -G wheel ansible && echo ansible:redhat | chpasswd' --update
+
+Define machine (single):
+--------------------------
+virt-install --name sp-awx-web01 \
+--description 'sp-awx-web01' \
+--ram 2048 \
+--vcpus 2 \
+--disk path=/kvm/disks/sp-awx-web01.qcow2 \
+--import \
+--os-type linux \
+--os-variant centos7.0 \
+--network bridge=virbr0 \
+--graphics none \
+--console pty,target_type=serial \
+--extra-args "console=ttyS0,115200n8 serial"
+
+Create disk images (bulk):
+-----------------------------
+for i in $(cat hostnames.txt); do virt-builder centos-7.8 -o /kvm/disks/$i.qcow2 --size 50G --format qcow2 --hostname $i --root-password password:redhat --firstboot-command 'useradd -m -G wheel ansible && echo ansible:redhat | chpasswd'; done
+
+2 mins
+
+15 min s update
+5 min bez update
+
+Define machine (bulk):
+--------------------------
+for i in $(cat hostnames.txt); do 
+virt-install --name $i \
+--description '$i' \
+--ram 2048 \
+--vcpus 2 \
+--disk path=/kvm/disks/$i.qcow2 \
+--import \
+--os-type linux \
+--os-variant centos7.0 \
+--network bridge=virbr0 \
+--graphics none \
+--console pty,target_type=serial \
+--noautoconsole & sleep 5; done
+
+virsh console 
+
+cd /home/lipinond/Work/Backup/Tieto/Projects/awx/awx-install
+
+code .
+
+IP adresy do inventory.yml
+ansible-playbook -u ansible -i inventory.yaml --ask-pass --ask-become-pass configure_awx.yaml
+
+--tags firewall
+
+for i in $(cat hostnames.txt); do virsh undefine $i; rm -vf /kvm/disks/$i.qcow2; done
+for i in $(cat hostnames.txt); do virsh shutdown $i; done
+
+virt-builder --delete-cache
+
+

@@ -1,0 +1,1881 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+    <!-- SEO -->
+    <title>SPŠOA - F-M | Automated installation of Linux | Web server | Ansible</title>
+    <meta name="description" content="WebSlides is the easiest way to make HTML presentations, portfolios, and landings. Just essential features.">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><img src="static/images/tux-tutor.png" style="float: left; margin-right: 20px; height: 50px"></p>
+        <p><h3>SPŠOA - F-M | Automated installation of Linux | Web server | Ansible</h3></p>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="horizontal">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section>
+         <span class="background" style="background-image:url('static/images/tux.jpg')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter" style="color: white">
+            <h1><strong>Automated installation of Linux</strong></h1>
+            <h1><strong>Web server, Ansible</strong></h1>
+            <h2>OPERAČNÍ SYSTÉMY GNU/LINUX</h2>
+          </div>
+          <!-- .end .wrap -->
+          <footer class="bg-trans-light">
+            <div class="wrap">
+              <p>
+                <span class="alignright" style="color: white">
+                    &copy; Ondrej Lipina | <a href="TietoEvry.com" target="_blank">TietoEvry.com</a>
+                </span>
+              </p>
+            </div>
+          </footer>
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap size-50 aligncenter">
+            <h2><strong>What is ahaed of us?</strong></h2>
+            <p class="text-intro">We will definitely have some fun and also learn something.</p>
+            <div class="bg-white shadow">
+              <ul class="flexblock reasons">
+                <li>
+                  <h2>Automated installation of CentOS Linux</h2>
+                  <p>Automated installation via prepared configuration file - kickstart.</p>
+                  <img width="80px" style="right: 10px; position: absolute;" src="static/images/centos-symbol.svg" alt="CentOS">
+                </li>
+                <li>
+                  <h2>Apache web server</h2>
+                  <p>Installation and basic configuration on single server.</p>
+                  <img width="80px" style="right: 10px; position: absolute;" src="static/images/apache-logo.svg" alt="The Apache Software Foundation">                
+                </li>
+             	<li>
+                  <h2>Ansible</h2>
+                  <p>Installation and configuration of web server on multiple servers via Ansible .</p>
+                  <img width="70px" style="right: 10px; position: absolute;" src="static/images/ansible.svg" alt="RedHat Ansible"> 
+                </li>                
+              </ul>
+            </div>
+            <!-- .end .bg-white shadow -->
+          </div>
+          <!-- .end .wrap -->
+        </section>  
+
+
+<!-- 1. Automated installation of CentOS Linux -->
+
+        <section class="bg-black slide-bottom">
+          <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
+          <span class="background" style="background-image:url('static/images/tux2.jpg')"></span>
+          <div class="wrap ">
+        	<h1 class="text-shadow">1. Automated installation of CentOS Linux</h1>
+        	<h4>Automated installation via prepared configuration file - kickstart.</h4>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+          <h3 class="slide-top">Table of Contents</h3>
+          <hr>
+            <div class="toc">
+              <ol>
+                <li>
+                  <a href="#slide=5" title="Go to Create VMs">
+                  <span class="chapter">Create VMs</span>
+                  <span class="toc-page">05</span>
+                  </a>
+                </li>
+                <li><a href="#slide=6" title="Go to Boot VMs and load kickstart"><span class="chapter">Boot VMs and load kickstart</span>
+                  <span class="toc-page">06</span></a>
+                  <ol>
+                    <li><a href="#slide=6" title="Go to Assign boot ISO"><span class="chapter">Assign boot ISO</span>
+                      <span class="toc-page">06</span></a>
+                    </li>
+                    <li><a href="#slide=07" title="Go to Modify boot loader parameters"><span class="chapter">Modify boot loader parameters</span>
+                      <span class="toc-page">07</span></a>
+                    </li> 
+                    <li><a href="#slide=08" title="Go to Installation"><span class="chapter">Installation</span>
+                      <span class="toc-page">08</span></a>
+                    </li>  
+                  </ol>
+                </li>
+                <li>
+                  <a href="#slide=09" title="Go to What is kickstart?"><span class="chapter">What is kickstart?</span>
+                  <span class="toc-page">09</span></a>
+                  <ol>
+                    <li><a href="#slide=09" title="Go to Kickstart structure"><span class="chapter">Kickstart structure</span>
+                      <span class="toc-page">09</span></a>
+                    </li>
+                    <li><a href="#slide=10" title="Go to Where to store kickstart"><span class="chapter">Where to store kickstart</span>
+                      <span class="toc-page">10</span></a>
+                    </li>                   
+                  </ol>
+                </li>
+                <li><a href="#slide=11" title="Go to Quiz"><span class="chapter">Quiz</span>
+                  <span class="toc-page">11</span></a>
+                </li> 
+                <li><a href="#slide=12" title="Go to Links"><span class="chapter">Links</span>
+                  <span class="toc-page">12</span></a>
+                </li>                                
+              </ol>
+            </div>
+            <!-- end .toc -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h1>Create 3 VMs</h1>
+            <ul class="flexblock clients border">
+              <li>
+                <a href="#" title="Client">
+                  <figure>
+                    	<h3 style="padding: 20px">ansi-master</h3>
+                    <figcaption>
+                    	<table>
+                    		<tr>
+                    			<td>type:</td>
+                    			<td>Linux</td>
+                    		</tr>
+               				<tr>
+                    			<td>Version:</td>
+                    			<td>Red Hat (64-bit)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Memory size:</td>
+                    			<td>2048 MB</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Processors:</td>
+                    			<td>1 CPU</td>
+                    		</tr>                    		
+                    		<tr>
+                    			<td>Disk:</td>
+                    			<td>15 GB (dynamically aloc.)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Network:</td>
+                    			<td>1 x bridged adapter</td>
+                    		</tr>                		
+                    	</table>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Client">
+                  <figure>
+                    	<h3 style="padding: 20px">ansi-slave1</h3>
+                    <figcaption>
+                    	<table>
+                    		<tr>
+                    			<td>type:</td>
+                    			<td>Linux</td>
+                    		</tr>
+               				<tr>
+                    			<td>Version:</td>
+                    			<td>Red Hat (64-bit)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Memory size:</td>
+                    			<td>1024 MB</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Processors:</td>
+                    			<td>1 CPU</td>
+                    		</tr>                    		
+                    		<tr>
+                    			<td>Disk:</td>
+                    			<td>15 GB (dynamically aloc.)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Network:</td>
+                    			<td>1 x bridged adapter</td>
+                    		</tr>                		
+                    	</table>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Client">
+                  <figure>
+                    	<h3 style="padding: 20px">ansi-slave2</h3>
+                    <figcaption>
+                    	<table>
+                    		<tr>
+                    			<td>type:</td>
+                    			<td>Linux</td>
+                    		</tr>
+               				<tr>
+                    			<td>Version:</td>
+                    			<td>Red Hat (64-bit)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Memory size:</td>
+                    			<td>1024 MB</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Processors:</td>
+                    			<td>1 CPU</td>
+                    		</tr>                    		
+                    		<tr>
+                    			<td>Disk:</td>
+                    			<td>15 GB (dynamically aloc.)</td>
+                    		</tr>
+                    		<tr>
+                    			<td>Network:</td>
+                    			<td>1 x bridged adapter</td>
+                    		</tr>                		
+                    	</table>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter">
+            <h1>Boot VMs and load kickstart</h1>
+            <h3>1. Assign boot iso</h3>
+            <p><code>CentOS-8-x86_64-1905-boot.iso</code></p>
+            <a href="static/images/vm-1.png"><img src="static/images/vm-1.png" width="40%"></a>
+          </div>
+          <!-- .end .wrap -->
+ 			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+		<section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1>Boot VMs and load kickstart</h1>
+            <h3>2. Modify boot loader parameters</h3>
+            <div class="grid vertical-align">
+              <div class="column">
+                <a href="static/images/boot-1.png"><img src="static/images/boot-1.png"></a>
+              </div>
+              <div class="column">
+                <a href="static/images/boot-1.png"><img src="static/images/boot-2.png"></a>
+              </div>
+              <div class="column alignleft">
+                <ol>
+                	<li>Press TAB</li>
+                	<li>Append: <pre>ks=http://10.0.4.250/ks/ansi-master.ks</pre><br>
+                		<pre>ks=http://10.0.4.250/ks/ansi-slave1.ks</pre><br>
+                		<pre>ks=http://10.0.4.250/ks/ansi-slave2.ks</pre><br>
+                	</li>
+                	<li>Press ENTER</li>
+                </ol>
+              </div>                              
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+		<section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h2>Boot VMs and load kickstart</h2>
+            <h3>3. Installation</h3>
+            <a href="static/images/boot-1.png"><img src="static/images/installation.png"></a>
+          </div>
+          <!-- .end .wrap -->
+ 			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+		<section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h2>Kickstart file</h2>
+            <h3>1. Kickstart structure</h3>
+            <div class="grid">
+            	<div class="column">
+            		<a href="http://" style="text-decoration: none; color: black"><pre style="height: 600px; overflow: scroll;">
+# Baseline version
+install
+#cdrom
+url --url http://10.0.0.1/repos/rhel/8/
+
+lang en_US.UTF-8
+
+# keyboard and timezone:
+keyboard --vckeymap=us --xlayouts='us'
+# Change timezone
+timezone Europe/Prague --isUtc
+
+rootpw --iscrypted $6$ICyeJW74evjkw1jI$3ELe2OYpWDIrlLD.TgzVM0kkCkdv/1xqhax4iBFv/Oq5lLaLXqfghdTJyN0MhXlDUBN3nA6K68gQ4HWvOpYwf0
+
+# modify for your environment
+network --bootproto dhcp --device eth0
+
+text
+
+# Bootloader settings
+
+
+zerombr
+ignoredisk --only-use=sda
+clearpart --drives=sda --all
+part /boot --fstype=ext4 --size=1024 --ondisk=sda --asprimary
+part pv.01 --size=1 --grow --ondisk=sda --asprimary
+
+volgroup --pesize=32768 vgRoot pv.01
+logvol / --fstype=xfs --name=lvRoot --vgname=vgRoot --size=6144
+logvol /home --fstype=xfs --name=lvHome --vgname=vgRoot --size=2048 --fsoptions="defaults,nosuid,nodev"
+logvol /var --fstype=xfs --name=lvVar --vgname=vgRoot --size=5120
+logvol /var/log --fstype=xfs --name=lvVarLog --vgname=vgRoot --size=4096 --fsoptions="defaults,nosuid,nodev"
+logvol /var/log/audit --fstype=xfs --name=lvVarLogAudit --vgname=vgRoot --size=2048 --fsoptions="defaults,nosuid,nodev"
+logvol /var/tmp --fstype=xfs --name=lvVarTmp --vgname=vgRoot --size=3072 --fsoptions="defaults,nosuid,nodev"
+logvol /opt --fstype=xfs --name=lvOpt --vgname=vgRoot --size=6144
+logvol /tmp --fstype=xfs --name=lvTmp --vgname=vgRoot --size=3072 --fsoptions="defaults,nosuid,nodev"
+logvol swap --fstype=swap --name=lvSwap --vgname=vgRoot --size=4096
+selinux --enforcing
+firewall --enabled
+services --disabled="kdump" --enabled="tuned,postfix,pmcd,oddjobd"
+skipx
+firstboot --disable
+reboot
+
+%packages
+@^minimal-environment
+@standard
+
+# Remove
+-cockpit-bridge
+-cockpit-packagekit
+-cockpit-ws
+-cockpit-system
+-cockpit
+-gsettings-desktop-schemas
+-insights-client
+-iwl6050-firmware
+-iwl5000-firmware
+-iwl2030-firmware
+-iwl1000-firmware
+-iwl7260-firmware
+-iwl6000g2a-firmware
+-iwl5150-firmware
+-iwl4965-firmware
+-iwl3160-firmware
+-iwl2000-firmware
+-iwl105-firmware
+-iwl100-firmware
+-iwl6000-firmware
+-iwl3945-firmware
+-iwl135-firmware
+-setroubleshoot
+-subscription-manager-cockpit
+-smartmontools
+
+# Add
+aide
+audit
+audit-libs
+expect
+pcp-system-tools
+logwatch
+NetworkManager-config-server
+tmux
+setroubleshoot-server
+sysstat
+sysfsutils
+iotop
+oddjob
+oddjob-mkhomedir
+python3
+python3-requests
+open-vm-tools
+unzip
+postfix
+libnsl
+
+%end
+%post  --log=/root/ks-post.log
+%end             	
+            		</pre></a>
+            	</div>
+            	<div class="column">
+            		<p>
+            			<h4>Local generator (GUI required)</h4><br>
+            			<code>yum install system-config-kickstart</code>
+            		</p>
+            		<p>
+            			<h4>On-line generator (RedHat account required)</h4><br>
+            			<a href="https://access.redhat.com/labs/kickstartconfig/">https://access.redhat.com/labs/kickstartconfig/</a>
+            		</p>
+            		<p>
+            			<h4>Text format</h4><br>
+            			<code>/root/anaconda-ks.cfg</code>
+            		</p>            		
+            	</div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+		<section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h2>Kickstart file</h2>
+            <h3>2. Where to store kickstart</h3>
+            <ol>
+	            <li>On a network
+		            <ol>
+		            	<li>HTTP</li>
+		            	<li>NFS</li>
+	            	</ol>
+	            </li>
+	            <li>Localy on a boot CD-ROM (iso) - ks.cfg file on / of ISO
+	            </li>	            
+        	</ol>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <!-- [class*="content-"] = container max-width:50% = 600px -->
+            <div class="content-center">
+              <h2>Quiz</h2>
+              <ul class="flexblock specs">
+                <li>
+                  <div>
+                    <h2>
+                      <svg class="fa-long-arrow-right">
+                        <use xlink:href="#fa-long-arrow-right"></use>
+                      </svg>
+                     1. Name at least 2 methods how to generate a kickstart file?
+                    </h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2>
+                      <svg class="fa-link">
+                        <use xlink:href="#fa-link"></use>
+                      </svg>
+                      2. Is it possible to create users via kickstart?
+                    </h2>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h2>
+                      <svg class="fa-text-height">
+                        <use xlink:href="#fa-text-height"></use>
+                      </svg>
+                      3. What we need to press to modify boot options menu?
+                    </h2>
+
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- end .content-center -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+		<section>      	
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+
+            <h2>Links</h2>
+            <dl>
+            	<dt>Kickstart</dt>
+	            <dd> - <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-putkickstarthere"> https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-kickstart2-putkickstarthere</a>
+	</dd>
+	            <dd> - <a href="https://access.redhat.com/labs/kickstartconfig/">https://access.redhat.com/labs/kickstartconfig/</a></dd>
+            	<dt>VirtualBox</dt>
+            	<dd> - <a href="https://www.virtualbox.org/manual/UserManual.html#gui-createvm">https://www.virtualbox.org/manual/UserManual.html#gui-createvm</a></dd>
+            </dl>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Automated installation of CentOS Linux</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+<!-- 2. Apache web server -->
+
+        <section class="bg-black slide-bottom">
+          <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
+          <span class="background" style="background-image:url('static/images/tux2.jpg')"></span>
+          <div class="wrap">
+            <h1 class="text-shadow">2. Apache web server</h1>
+            <h4>Installation and basic configuration on single server.</h4>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+          <h3 class="slide-top">Table of Contents</h3>
+          <hr>
+            <div class="toc">
+              <ol>
+                <li>
+                  <a href="#slide=15" title="Go to Install Apache">
+                  <span class="chapter">Install Apache</span>
+                  <span class="toc-page">15</span></a>
+                    <ol>
+                    <li><a href="#slide=15" title="Go to Install Apache"><span class="chapter">Install Apache</span>
+                      <span class="toc-page">15</span></a>
+                    </li>
+                    <li><a href="#slide=16" title="Go to Configure firewall"><span class="chapter">Configure firewall</span>
+                      <span class="toc-page">16</span></a>
+                    </li>
+                    <li><a href="#slide=17" title="Go to Serve a content"><span class="chapter">Serve a content</span>
+                      <span class="toc-page">17</span></a>
+                    </li>                                          
+                  </ol>
+                </li>
+                <li><a href="#slide=18" title="Go to Basic Apache Configuration">
+                  <span class="chapter">Basic Apache Configuration</span>
+                  <span class="toc-page">18</span></a>
+                  <ol>
+                 	<li><a href="#slide=18" title="Configs and logs"><span class="chapter">Configs and logs</span>
+                      <span class="toc-page">18</span></a>
+                    </li>                    	
+                    <li><a href="#slide=19" title="Go to vhosts"><span class="chapter">vhosts</span>
+                      <span class="toc-page">19</span></a>
+                    </li>
+                    <li><a href="#slide=20" title="Go to mod_ssl"><span class="chapter">mod_ssl</span>
+                      <span class="toc-page">20</span></a>
+                    </li>
+                     
+                  </ol>
+                </li>
+                <li><a href="#slide=21" title="Go to Practice"><span class="chapter">Practice</span>
+                  <span class="toc-page">21</span></a>
+                </li> 
+                <li><a href="#slide=22" title="Go to Links"><span class="chapter">Links</span>
+                  <span class="toc-page">22</span></a>
+                </li>                                
+              </ol>
+            </div>
+            <!-- end .toc -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Install Apache</strong></h3>
+          	<div class="grid">
+          	  <div class="column">
+                <h4>1. Install Apache</h4>
+                <p><ol>
+                	<li>Search for available packages<br>
+                		<pre>yum search httpd</pre>
+                	</li>
+                	<li>Install package <code>httpd httpd-manual</code>
+                		<pre>yum install httpd httpd-manual</pre>
+                	</li>
+                </ol></p>
+
+              </div>
+              <div class="column">
+                <h4>2. Enable Apache</h4>
+                <p><ol>
+                	<li>Enable Apache after system start
+                		<pre>systemctl enable httpd</pre>
+                	</li>
+                	<li>Start Apache
+                		<pre>systemctl start httpd</pre>
+                	</li>
+                	<li>Show status
+                		<pre>systemctl status httpd</pre>
+                	</li>
+                </ol></p>                
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Configure Firewall</strong></h3>
+            <p><ol>
+            	<li>Check if firewall is enabled<br>
+            		<pre>systemctl status firewlld</pre>
+            	</li>
+            	<li>Enable http port on firewall</code>
+            		<pre>firewall-cmd --add-service=http --permanent
+firewall-cmd --add-port=80/tcp --permanent</pre>
+            	</li>
+            	<li>Reload firewall<br>
+            		<pre>firewall-cmd --reload</pre>
+            	</li>
+            	<li>Show status<br>
+            		<pre>firewall-cmd --list-all</pre>
+            	</li>
+            </ol></p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Serve a content</strong></h3>
+            <p><ol>
+            	<li>Switch directory to /var/www/html<br>
+            		<pre>cd /var/www/html</pre>
+            	</li>
+            	<li>Create file index.html</code>
+            		<pre>touch index.html</pre>
+            	</li>
+            	<li>Insert content<br>
+            		<pre>echo '&lt;h1&gt;Hello World!&lt;/h1&gt;' > index.html && echo 'hostname:' $(hostname) >> index.html && echo '&lt;br&gt;user:' $(whoami) >> index.html</pre>
+            	</li>
+            </ol></p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Basic Apache configuration</strong></h3>
+          	<h4>Configs and logs</h4>
+          	<div class="grid">
+          	  <div class="column">
+                     	<table>
+                    		<tr>
+                    			<td>Server root dir:</td>
+                    			<td><code>/etc/httpd</code></td>
+                    		</tr>
+               				<tr>
+                    			<td>Main configuration file:</td>
+                    			<td><code>/etc/httpd/conf/httpd.conf</code></td>
+                    		</tr>
+                    		<tr>
+                    			<td>Additional configuration dir:</td>
+                    			<td><code>/etc/httpd/conf.d/</code></td>
+                    		</tr>
+                    		<tr>
+                    			<td>Log directory:</td>
+                    			<td><code>/var/log/httpd</code></td>
+                    		</tr>                    		
+                    		<tr>
+                    			<td>Main log files:</td>
+                    			<td><code>/var/log/httpd/access_log</code><br><code>/var/log/httpd/error_log</code></td>
+                    		</tr>
+                    		<tr>
+                    			<td>Content dir:</td>
+                    			<td><code>/var/www/html</code></td>
+                    		</tr>                		
+                    	</table>
+                    	<h4>Links</h4>
+                    	<a href="https://httpd.apache.org/docs/2.4/sections.html">https://httpd.apache.org/docs/2.4/sections.html</a><br>
+                    	<a href="https://httpd.apache.org/docs/2.4/">https://httpd.apache.org/docs/2.4/</a>
+
+              </div>
+              <div class="column">
+              	<code>/etc/httpd/conf/httpd.conf</code>
+<pre style="height: 600px; overflow: scroll;">
+ServerRoot "/etc/httpd"
+
+Listen 80
+
+Include conf.modules.d/*.conf
+
+User apache
+Group apache
+
+ServerAdmin root@localhost
+
+&lt;Directory />
+    AllowOverride none
+    Require all denied
+&lt;/Directory>
+
+DocumentRoot "/var/www/html"
+
+&lt;Directory "/var/www">
+    AllowOverride None
+    Require all granted
+&lt;/Directory>
+
+&lt;Directory "/var/www/html">
+    Options Indexes FollowSymLinks
+
+    AllowOverride None
+
+    Require all granted
+&lt;/Directory>
+
+&lt;IfModule dir_module>
+    DirectoryIndex index.html
+&lt;/IfModule>
+
+&lt;Files ".ht*">
+    Require all denied
+&lt;/Files>
+
+ErrorLog "logs/error_log"
+
+LogLevel warn
+
+&lt;IfModule log_config_module>
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b" common
+
+    &lt;IfModule logio_module>
+      LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio
+    &lt;/IfModule>
+
+    CustomLog "logs/access_log" combined
+&lt;/IfModule>
+
+&lt;IfModule alias_module>
+
+    ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
+
+&lt;/IfModule>
+
+&lt;Directory "/var/www/cgi-bin">
+    AllowOverride None
+    Options None
+    Require all granted
+&lt;/Directory>
+
+&lt;IfModule mime_module>
+    TypesConfig /etc/mime.types
+
+    AddType application/x-compress .Z
+    AddType application/x-gzip .gz .tgz
+    AddType text/html .shtml
+    AddOutputFilter INCLUDES .shtml
+&lt;/IfModule>
+
+AddDefaultCharset UTF-8
+
+&lt;IfModule mime_magic_module>
+    MIMEMagicFile conf/magic
+&lt;/IfModule>
+
+EnableSendfile on
+
+IncludeOptional conf.d/*.conf
+	
+</pre>              
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>vhosts</strong></h3>
+          	<p>The term Virtual Host refers to the practice of running more than one web site (such as company1.example.com and company2.example.com) on a single machine. Virtual hosts can be "IP-based", meaning that you have a different IP address for every web site, or "name-based", meaning that you have multiple names running on each IP address. The fact that they are running on the same physical server is not apparent to the end user.</p>
+          	<h4>Example of name-based Virtual Host</h4>
+          	<div class="grid">
+          	  <div class="column">
+          	  	<p>Config folder: <code>/etc/httpd/conf.d</code>
+          	  	<ol>
+          	  		<li>Config files are loaded alphabetically</li>
+          	  		<li>If any vhost is loaded, httpd.conf is served as latest - basically overriden</li>
+          	  		<li>At least 2 vhosts should be created, default one with: <code>_default_:80</code>, second one with <code>*:80</code> </li>
+          	  	</ol>
+          	  	</p>    	  	
+            	<h4>Links</h4>
+            	<a href="https://httpd.apache.org/docs/2.4/vhosts/">https://httpd.apache.org/docs/2.4/vhosts/</a>
+
+              </div>
+              <div class="column">
+              	<code>/etc/httpd/conf.d/www.example.com.conf</code>
+<pre>
+&lt;VirtualHost *:80>
+    ServerName www.example.com
+    ServerAlias example.com 
+    DocumentRoot "/var/www/example.com"
+    ServerAdmin webmaster@host.example.com
+    ErrorLog "logs/host.example.com-error_log"
+    TransferLog "logs/host.example.com-access_log"
+&lt;/VirtualHost>
+</pre>              
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>mod_ssl</strong></h3>
+          	<p>This module provides SSL v3 and TLS v1.x support for the Apache HTTP Server. SSL v2 is no longer supported.<br>This module relies on OpenSSL to provide the cryptography engine.</p>
+          	<h4>Example Virtual Host with enabled mod_ssl</h4>
+          	<div class="grid">
+          	  <div class="column">
+          	  	<p>
+          	  	<ol>
+          	  		<li>Install mod_ssl<br>
+          	  		<pre>yum install mod_ssl</pre>
+          	  		</li>
+          	  		<li>Check config files<br>
+          	  		<pre>rpm -ql mod_ssl
+cat /etc/httpd/conf.d/ssl.conf</pre>
+          	  		</li>
+          	  	</ol>
+          	  	</p>   	  	
+            	<h4>Links</h4>
+            	<a href="https://httpd.apache.org/docs/current/mod/mod_ssl.html">https://httpd.apache.org/docs/current/mod/mod_ssl.html</a>
+
+              </div>
+              <div class="column">
+              	<code>/etc/httpd/conf.d/www.example.com.conf</code>
+<pre>&lt;VirtualHost *:443>
+	ServerName www.example.com
+	ServerAlias example.com
+	DocumentRoot "/var/www/www.example.com"
+
+	ErrorLog logs/ssl_error_log
+	TransferLog logs/ssl_access_log
+	LogLevel warn
+
+	SSLEngine on
+	SSLHonorCipherOrder on
+	SSLProtocol -all +TLSv1.3 
+	SSLCipherSuite PROFILE=SYSTEM
+	SSLCertificateFile /etc/pki/tls/certs/localhost.crt
+	SSLCertificateKeyFile /etc/pki/tls/private/localhost.key
+	SSLCACertificateFile /etc/pki/tls/certs/ca-bundle.crt
+&lt;/VirtualHost>
+</pre> 
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Practice</strong></h3>
+          	<p class="">Create Virtual Host on <code>ansi-slave1</code> for domain <code>www.jaskier.com</code>. It should serve a content from code block on the right.</p>
+          	<div class="grid">
+          	  <div class="column">
+          	  	<p>
+          	  		<ol>
+          	  			<li>On <code>ansi-master</code> put into <code>/etc/hosts<br>
+          	  				<pre></code> <code>ip-of-ansi-slave1 www.jaskier.com jaskier.com</code></pre></li>
+          	  			<li>Serve content on port <strong>8080</strong>, do not use SSL</li>
+          	  			<li>Serve same content also for domain jaskier.com (without www)</li>
+          	  			<li>Document Root path is up to you.</li>
+          	  			<li>Test all from <code>ansi-master</code></li>
+          	  			<li><strong>Additional</strong>: Install mod_php and create next to index.html file index.php with content: <code>&lt;?php phpinfo(); ?></code></li>
+          	  		</ol>
+          	  	</p>   	  	
+            	<h4>Links</h4>
+            	<a href="https://httpd.apache.org/docs/2.4/vhosts/">https://httpd.apache.org/docs/2.4/vhosts/</a>
+            	<a href="https://httpd.apache.org/docs/2.4/">https://httpd.apache.org/docs/2.4/</a>
+
+              </div>
+              <div class="column">
+              	<code>index.html</code>
+<pre>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>Welcome on www.jaskier.com&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;h1>Welcome on Jaskier.com main page.&lt;/h1>
+&lt;/body>
+&lt;/html>
+</pre> 
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=13">2. Apache web server</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>          
+        </section>
+
+<!-- 3. Ansible -->
+
+        <section class="bg-black slide-bottom">
+          <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
+          <span class="background" style="background-image:url('static/images/tux2.jpg')"></span>
+          <div class="wrap ">
+        	<h1 class="text-shadow">3. Ansible</h1>
+        	<h4>Installation and configuration of web server on multiple servers via Ansible.</h4>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+          <h3 class="slide-top">Table of Contents</h3>
+          <hr>
+            <div class="toc">
+              <ol>
+                <li><a href="#slide=24" title="Go to What is Ansible?"><span class="chapter">What is Ansible?</span>
+                  <span class="toc-page">24</span></a>
+                </li> 
+                <li><a href="#slide=25" title="Go to Installation"><span class="chapter">Installation</span>
+                  <span class="toc-page">25</span></a>
+                </li>                 
+                <li>
+                  <a href="#slide=26" title="Go to Configuration">
+                  <span class="chapter">Configuration</span>
+                  <span class="toc-page">26</span></a>
+                    <ol>
+                    <li><a href="#slide=26" title="Go to Configuration file"><span class="chapter">Configuration file</span>
+                      <span class="toc-page">26</span></a>
+                    </li>
+                    <li><a href="#slide=27" title="Go to Hosts & Inventories"><span class="chapter">Hosts & Inventories</span>
+                      <span class="toc-page">27</span></a>
+                    </li> 
+                    <li><a href="#slide=28" title="Go to SSH configuration"><span class="chapter">SSH configuration</span>
+                      <span class="toc-page">28</span></a>
+                    </li>                                                              
+                  </ol>
+                </li>
+              	<li><a href="#slide=30" title="Go to Usage">
+                  <span class="chapter">Usage</span>
+                  <span class="toc-page">30</span></a>
+                  <ol>
+                 	<li><a href="#slide=30" title="Command-line options"><span class="chapter">Ad-hoc commands</span>
+                      <span class="toc-page">30</span></a>
+                    </li>                    	
+                    <li><a href="#slide=31" title="Go to The Playbook!"><span class="chapter">The Playbook!</span>
+                      <span class="toc-page">31</span></a>
+                    </li>
+                    <li><a href="#slide=33" title="Go to Execute playbook"><span class="chapter">Execute playbook</span>
+                      <span class="toc-page">33</span></a>
+                    </li>
+                     
+                  </ol>
+                </li>
+                <li><a href="#slide=34" title="Go to Practice"><span class="chapter">Practice</span>
+                  <span class="toc-page">34</span></a>
+                </li> 
+                <li><a href="#slide=35" title="Go to Links"><span class="chapter">Links</span>
+                  <span class="toc-page">35</span></a>
+                </li>                                
+              </ol>
+            </div>
+            <!-- end .toc -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+        	<div class="wrap">
+        		<h3>1. What is Ansible?</h3>
+        		<p>Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications — automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.</p>
+        		<div class="grid">
+        			<div class="column">
+		        		<p>
+		        			<a href="https://docs.ansible.com/ansible/latest/index.html">https://docs.ansible.com/ansible/latest/index.html</a><br>
+		        			<a href="https://github.com/ansible/ansible">https://github.com/ansible/ansible</a>
+		        		</p>
+		        		<p>
+		        			<ol>
+		        				<li>On master machine you need Ansible engine</li>
+		        				<li>On client machines just enabled ssh and python</li>
+		        				<li>Uses YAML language for scripts (playbooks)</li>
+		        				<li>Large list of modules and already developed playbooks</li>
+		        			</ol>
+		        		</p>       				
+        			</div>
+        			<div class="column">
+        				<img src="static/images/ansible-glue-tools.png">
+        			</div>
+        		</div>
+        	</div>
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>    	
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Install Ansible</strong></h3>
+            <p><ol>
+            	<li>Enable EPEL (Extra Packages for Enterprise Linux) repository<br>
+            		<pre>dnf install epel-release</pre>
+            	</li>
+            	<li>Install Ansible</code>
+            		<pre>dnf install ansible</pre>
+            	</li>
+            	<li>Test with ping module<br>
+            		<pre>ansible -m ping localhost
+localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+</pre>
+            	</li>
+            </ol></p>
+            <p><a href="https://docs.ansible.com/ansible/latest/installation_guide/index.html">https://docs.ansible.com/ansible/latest/installation_guide/index.html</a></p>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>     
+        </section>
+
+       <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Configuration</strong></h3>
+          	<h4>Configuration files and commands</h4>
+          	<div class="grid">
+          	  <div class="column">
+                     	<table>
+               				<tr>
+                    			<td>Main configuration file:</td>
+                    			<td><code>/etc/ansible/ansible.cfg</code></td>
+                    		</tr>
+                    		<tr>
+                    			<td>Default host (inventory file):</td>
+                    			<td><code>/etc/ansible/hosts</code></td>
+                    		</tr>
+                    		<tr>
+                    			<td>Commands:</td>
+                    			<td>
+                    				<b><code>ansible</code></b><br>
+                    				<b><code>ansible-playbook</code></b><br>
+                    				<code>ansible-config</code><br>
+                    				<code>ansible-vault</code><br>
+                    				<code>...</code>
+                    			</td>
+                    		</tr>                    		               		
+                    	</table>
+                    	<h4>Links</h4>
+                    	<a href="https://www.ansible.com/">https://www.ansible.com/</a><br>
+                    	<a href="https://docs.ansible.com/">https://docs.ansible.com/</a>
+
+              </div>
+              <div class="column">
+              	<code>/etc/ansible/ansible.cfg</code>
+<pre>
+# some basic default values...
+
+#inventory      = /etc/ansible/hosts
+#library        = /usr/share/my_modules/
+#module_utils   = /usr/share/my_module_utils/
+#remote_tmp     = ~/.ansible/tmp
+#local_tmp      = ~/.ansible/tmp
+#plugin_filters_cfg = /etc/ansible/plugin_filters.yml
+#forks          = 5
+#poll_interval  = 15
+#sudo_user      = root
+#ask_sudo_pass = True
+#ask_pass      = True
+#transport      = smart
+#remote_port    = 22
+#module_lang    = C
+#module_set_locale = False
+
+	
+</pre>              
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>     
+        </section>
+
+       <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Configuration</strong></h3>
+          	<h4>Hosts & Inventories</h4>
+          	<p>Perforfm all steps on <code>ansi-master</code>.
+          	<div class="grid">
+          	  <div class="column">
+	          		<ol>
+	          			<li>Configure hostnames and IP addresses in <code>/etc/hosts</code> file:<br>
+	          				<pre>ip ansi-master
+ip ansi-slave1
+ip ansi-slave2</pre></li>
+						<li>Create user <code>ansi</code><br>
+							<pre>useradd ansi
+passwd ansi</pre>use <code>redhat</code> as password</li>
+						<li>Switch to user <code>ansi</code> and create direcotry structure<br>
+							<pre>su - ansi
+mkdir -p ansible/playbooks ansible/templates</pre></li>
+
+	          		</ol>
+	          	</p>
+              </div>
+              <div class="column">
+              	<ol start="4">
+              		<li>Prepare our own inventory file<br>
+						<pre>cd ansible
+vim hosts</pre>/home/ansi/ansible/hosts
+						<pre>ansi-master
+
+[webservers]
+ansi-slave1
+ansi-slave2
+</pre>
+					</li>
+              	</ol><br>
+              	<h5>Links</h5>
+              	https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+              </div>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>      
+        </section>
+
+       <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Configuration</strong></h3>
+          	<h4>SSH Configuration</h4>
+          	<ol>
+          		<li>Generate private-public ssh key pair<br>
+          			<pre>ssh-keygen -b 4096</pre>
+          		</li>
+          		<li>Prepare sudoers template <code>/home/ansi/ansible/templates/sudoers-ansi</code><br>
+          			<pre>ansi	ALL=(ALL)	NOPASSWD: ALL</pre>
+          		</li>
+          		<li>Distribute the public key and sudoers configuration to <code>ansi-slave[1,2]</code><br>
+          			<pre>ssh-copy-i..... eee no! Let's be smart and create playbook for that! :)</pre></li>
+          	</ol>
+          	<h5></h5>
+
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>        
+        </section>
+
+       <section>
+          <!--.wrap = container (width: 90%) -->
+          	<div class="wrap">
+
+          			<h3><strong>Configuration</strong></h3>
+          			<h4>SSH Configuration</h4>
+          			<h5>Create ansi user playbook</h5>
+          			<pre>wget "http://10.0.4.250/files/ansi-user.yml" -O ~/ansible/playbooks/ansi-user.yml</pre><br>
+          			<h5>Run the playbook</h5>
+          			<pre>ansible-playbook -u root -k -i hosts --limit webservers playbooks/ansi-user.yml</pre>
+
+          	</div>
+
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>        
+        </section>
+
+          			<pre style="height: 600px; overflow: scroll;">---
+  - name: Create ansi user
+    hosts: webservers
+    become: yes
+
+    tasks:
+      - name: Generate password for user ansi
+        user:
+          name: ansi
+          state: present
+          password: '$6$fT.Upsnn9LWs8mdz$MhKHTy7Nmqknem6XfjdVHv59t9SRJwJBXtIrRJA24QJ.BFEQNHdxMZ7mVWhvPUu7HMGLH8OcHhGMsbM3C5lFO.'
+          #groups: wheel
+          #append: yes
+
+      - name: Add public key to authorized_keys
+        authorized_key:
+          user: ansi
+          state: present
+          key: "{{ lookup('file', '/home/ansi/.ssh/id_rsa.pub') }}"
+      
+      - name: Configure sudo
+        template:
+          src: /home/ansi/ansible/templates/sudoers-ansi
+          dest: /etc/sudoers.d/ansi
+          owner: root
+          group: root
+          mode: '0440'
+          validate: /usr/sbin/visudo -cf %s</pre>
+
+       <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+          	<h3><strong>Usage</strong></h3>
+          	<h4>Ad-hoc commands</h4>
+          	<h5>Module: Ping - ping only localhost</h5>
+          	<pre>ansible localhost -m ping</pre>
+          	<h5>Module: Ping - ping all servers from inventory and try to switch to user bruce</h5>
+			<pre>ansible all -m ping -u bruce --become</pre>
+			<h5>Module: Ping - ping all servers and force ask for password</h5>
+			<pre>ansible -k -i hosts all -m ping</pre>
+			<h5>Module: command</h5>
+			<pre>ansible -m command -a "cat /etc/redhat-release" localhost</pre>
+			<pre>ansible all -i localhost, -m debug -a "msg={{ 'redhat' | password_hash('sha512') }}"</pre>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>       
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>The Playbook!</strong></h3>
+                <p>Simply put, playbooks are the basis for a really simple configuration management and multi-machine deployment system, unlike any that already exist, and one that is very well suited to deploying complex applications.</p>
+                <p>Playbooks are expressed in <strong>YAML format</strong> and have a minimum of syntax, which intentionally tries to not be a programming language or script, but rather a model of a configuration or a process.</p>
+                <p><code>example.yml</code><pre>---
+- hosts: 
+  tasks:
+  - name: 
+    yum:
+      name: 
+      state:</pre></p>
+                <p><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html</a>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>
+---
+  - name: Configure Apache Web server
+    hosts: all
+    become: yes
+
+    tasks:
+      - name: Ensure httpd is installed 
+        yum:
+          name: httpd
+          state: latest
+      
+      - name: Ensure httpd is running
+        systemd:
+          name: httpd
+          enabled: yes
+          state: started
+
+      - name: Configure firewall
+        firewalld:
+          service: "{{ item }}"
+          permanent: yes
+          state: enabled
+          immediate: yes
+        loop:
+          - http
+          - https                	
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Playbook for Apache deployment</strong></h3>
+                <p class="text-intro">Let's create a simple playbook for apache installation and configuration.</p>
+                <p><h5>3 tasks:</h5>
+                	<ol>
+                	<li>Install httpd</li>
+                	<li>Enable and start httpd service</li>
+                	<li>Configure firewall</li>
+                </ol></p>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+              	<code>~/ansible/playbooks/apache.yml</code>
+                <pre>
+---
+  - name: Configure Apache Web server
+    hosts: all
+    become: yes
+
+    tasks:
+      - name: Ensure httpd is installed 
+        yum:
+          name: httpd
+          state: latest
+      
+      - name: Ensure httpd is running
+        systemd:
+          name: httpd
+          enabled: yes
+          state: started
+
+      - name: Configure firewall
+        firewalld:
+          service: "{{ item }}"
+          permanent: yes
+          state: enabled
+          immediate: yes
+        loop:
+          - http
+          - https                	
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+        	<div class="wrap">
+        		<h3>Execute playbook</h3>
+        		<p>
+        			<h5>Example of executing of playbook</h5>
+        			<pre>ansible-playbook -i hosts -k playbook.yml</pre><br>
+        			<h5>Run playbook from previous slide</h5>
+        			<pre>ansible-playbook -i hosts --limit webservers playbooks/apache.yml</pre>
+        		</p>
+        		<p><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#executing-a-playbook">https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#executing-a-playbook</a></p>
+        	</div>
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Lab</strong></h3>
+                <p class="text-intro">Extend Apache playbook to create vhost on both slave[1,2] and serve content for domain www.seznam.cz.</p>
+          		<ol><h5>Vhost configuration:</h5>
+          			<li>ServerName: www.seznam.cz</li>
+          			<li>DocumentRoot: /var/www/seznam.cz</li>
+          		</ol>
+          		<p>
+          			<h5>Links</h5>
+          			<a href="https://httpd.apache.org/docs/2.4/vhosts/examples.html">https://httpd.apache.org/docs/2.4/vhosts/examples.html</a>
+					<a href="https://docs.ansible.com/ansible/latest/modules/copy_module.html#copy-module">https://docs.ansible.com/ansible/latest/modules/copy_module.html#copy-module</a>
+					<a href="https://docs.ansible.com/ansible/latest/modules/template_module.html#template-module">https://docs.ansible.com/ansible/latest/modules/template_module.html#template-module</a>
+					<a href="https://docs.ansible.com/ansible/latest/modules/command_module.html#command-module">https://docs.ansible.com/ansible/latest/modules/command_module.html#command-module</a>
+          		</p>
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+              	<code>index.html</code>
+              	<pre>&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+	&lt;title>Welcome on Seznam.cz</title>
+&lt;/head>
+&lt;body>
+	&lt;h1>Welcome on Seznam.cz main page.</h1>
+	&lt;a href="https://www.seznam.cz" target="_blank">Go to original Seznam.cz web page.</a>
+&lt;/body>
+&lt;/html></pre>
+              </div>
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+        	<div class="wrap">
+        		<h3><strong>Links</strong></h3>
+        		<p>
+        			<dt>
+        				<dd><a href="https://github.com/ansible/ansible">https://github.com/ansible/ansible</dd>
+        				<dd><a href="https://docs.ansible.com/ansible/latest/">https://docs.ansible.com/ansible/latest/</a></dd>
+        				<dd><a href="https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html">https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html</a></dd>
+        				<dd><a href="https://docs.ansible.com/ansible/latest/modules/user_module.html">https://docs.ansible.com/ansible/latest/modules/user_module.html</a></dd>
+        				<dd><a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html</a></dd>
+        				<dd><a href="https://docs.ansible.com/ansible/latest/modules/list_of_system_modules.html">https://docs.ansible.com/ansible/latest/modules/list_of_system_modules.html</a></dd>
+        			</dt>
+        		</p>
+        	</div>
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=23">3. Ansible</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section class="slide-bottom">
+        	<span class="background" style="background: url('static/images/172970.jpg'); background-size: cover;"></span>
+          <div class="wrap">
+            <div class="content-left text-serif">
+              <h2>
+                <strong>Thanks.</strong>
+              </h2>
+              <p><strong>Ondrej Lipina</strong><br>Senior Service Architect</p> 
+              <p><br> <a href="mailto:ondrej.lipina@tieto.com">ondrej.lipina@tieto.com</a><br><a href="https://www.tietoevry.com/">https://www.tietoevry.com/</a></p>
+            </div>
+            <!-- .end .content-right -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>

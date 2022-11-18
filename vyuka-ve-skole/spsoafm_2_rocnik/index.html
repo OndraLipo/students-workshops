@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+    <!-- SEO -->
+    <title>SPŠOA - F-M | 2 | Využití linuxového serveru v praxi</title>
+    <meta name="description" content="SPŠOA - F-M | 2 | Využití linuxového serveru v praxi">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS WebSlides -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><img src="static/images/tux-tutor.png" style="float: left; margin-right: 20px; height: 50px"></p>
+        <p><h3>SPŠOA - F-M | 2 | Využití linuxového serveru v praxi</h3></p>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="horizontal">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 90% / <div class="wrap size-50"> = 45%;
+        -->
+
+        <section>
+         <span class="background" style="background-image:url('static/images/tux.jpg')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap aligncenter" style="color: white">
+            <h1><strong>Využití linuxového serveru v praxi</strong></h1>
+            <h2>Přednáška pro 2. ročník</h2>
+          </div>
+          <!-- .end .wrap -->
+          <footer class="bg-trans-light">
+            <div class="wrap">
+              <p>
+                <span class="alignright" style="color: white">
+                    &copy; Ondřej Lipina | <a href="https://www.tietoevry.com/cz" target="_blank">TietoEvry.com</a>
+                </span>
+              </p>
+            </div>
+          </footer>
+        </section>
+
+        <section>
+          <div class="wrap size-50">
+          <h3 class="slide-top">Obsah</h3>
+          <hr>
+            <div class="toc">
+              <ol>
+                <li>
+                  <a href="#slide=3" title="Pár slov o firmě, mně a teamu">
+                  <span class="chapter">Pár slov o firmě, mně a teamu</span>
+                  <span class="toc-page">03</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#slide=4" title="Co je to server?">
+                  <span class="chapter">Co je to server?</span>
+                  <span class="toc-page">04</span></a>
+                </li>
+                <li>
+                  <a href="#slide=5" title="*NIX Overview">
+                  <span class="chapter">*NIX Overview</span>
+                  <span class="toc-page">05</span></a>
+                </li>
+                <li>
+                  <a href="#slide=6" title="Nejčastější využití Linux serveru">
+                  <span class="chapter">Nejčastější využití Linux serveru</span>
+                  <span class="toc-page">06</span></a>
+                </li>  
+                <li>
+                  <a href="#slide=07" title="Nejčastější využití Windows serveru">
+                  <span class="chapter">Nejčastější využití Windows serveru</span>
+                  <span class="toc-page">07</span></a>
+                </li>                                 
+                <li><a href="#slide=8" title="Vytvoření 4x VMs a instalace Ansible AWX pomoci playbooku"><span class="chapter">Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</span>
+                  <span class="toc-page">08</span></a>
+                  <ol>
+                  	<li><a href="#slide=09" title="Vytvoření obrazu disku"><span class="chapter">Vytvoření obrazu disku</span>
+                  	  <span class="toc-page">09</span></a>
+                  	</li>                      	
+                    <li><a href="#slide=10" title="Instalace VM"><span class="chapter">Instalace VM</span>
+                      <span class="toc-page">10</span></a>
+                    </li>                  	
+                    <li><a href="#slide=11" title="Přiřazení IP adres k hostům v inventory"><span class="chapter">Přiřazení IP adres k hostům v inventory</span>
+                      <span class="toc-page">11</span></a>
+                    </li>
+                    <li><a href="#slide=12" title="Instalace Ansible AWX"><span class="chapter">Instalace Ansible AWX</span>
+                      <span class="toc-page">12</span></a>
+                    </li>    
+                  </ol>
+                </li>
+                <li>
+                  <a href="#slide=13" title="QA?">
+                  <span class="chapter">QA?</span>
+                  <span class="toc-page">13</span></a>
+                </li>
+              </ol>
+            </div>
+            <!-- end .toc -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>1. Pár slov o firmě, mně a teamu </h3>
+            <h4>TietoEvry</h4>
+           	<p><ul><li>TietoEVRY má hlavní sídlo ve Finsku a zaměstnává téměř 24 000 expertů v desítkách zemí.</li>
+            <li> <a href="https://www.tietoevry.com/en/about-us/our-company/">https://www.tietoevry.com/en/about-us/our-company/</a></li></ul></p>
+            <h4>O mně</h4>
+              <p>
+              <ul>
+                <li>2 roky v TietoEvry</li>
+                <li>5 let v OKIN BPS</li>
+                <li>10+ let praxe s UNIXem</li>
+              </ul>
+              </p>
+            <h4>Team - Server Management Linux Operations</h4>
+              <p>
+              <ul>
+                <li>spravujeme cca 7000 UNIX serverů</li>
+                <li>80% RedHat, SUSE, (Oracle Linux)</li>
+                <li>20% HP-UX, Solaris, AIX</li>
+                <li>cca. 250 fyzických serverů</li>
+              </ul>
+              </p>              
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=3" >1. Pár slov o firmě, mně a teamu</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>2. Co je to server?</h3>
+           	<p><h5><a href="https://wiki.li-on.cz/academy/linux/linux-workshop-1/1-hw-overview">https://wiki.li-on.cz/academy/linux/linux-workshop-1/1-hw-overview</a></h5>
+           	</p>     	 
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=4" >2. Co je to server?</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>3. *NIX overview</h3>
+            <p><h5><a href="https://wiki.li-on.cz/academy/linux/linux-workshop-1/2-nix-systems-overview">https://wiki.li-on.cz/academy/linux/linux-workshop-1/2-nix-systems-overview</a></h5>
+            </p>       
+          </div>
+          <!-- .end .wrap -->
+      <footer class="bg-white">
+      <!--.wrap o <nav> = container 1200px -->
+      <div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=5" >3. *NIX overview</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+      </div>
+      </footer>
+        </section>        
+
+        <section>
+          <div class="wrap">
+            <h3>4. Nejčastější využití Linux serveru</h3>
+            <p>
+              <ul>
+                <li>Webový server (apache, nginx)</li>
+                <li>Databázový server (Oracle, Mysql, DB2, MariaDB, psql)</li>
+                <li>Aplikační server (php, java, python, C++)</li>
+                <li>Síťově úložiště (NFS, SMB)</li>
+                <li>DNS server</li>
+                <li>Kontejnérový host (docker, podman, kubernetes)</li>
+                <li>Virtualizační host (KVM, XEN)</li>
+                <li>Vývojové prostředí (Vagrant)</li>
+                <li>Síťový prvek (router, firewall)</li>
+                <li>Automatizační nástroj (Ansible, Salt)</li>
+              </ul>
+		         	 
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=6" >4. Nejčastější využití Linux serveru</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>5. Nejčastější využití Windows serveru</h3>
+            <p>
+              <ul>
+                <li>Doménový řadič</li>
+                <li>Active Directory (ldap, GPO)</li>
+                <li>Síťové úložiště (SMB)</li>
+                <li>DNS server</li>
+                <li>DHCP server</li>
+                <li>DNS server</li>
+              </ul>
+               
+          </div>
+          <!-- .end .wrap -->
+      <footer class="bg-white">
+      <!--.wrap o <nav> = container 1200px -->
+      <div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=6" >5. Nejčastější využití Linux serveru</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+      </div>
+      </footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</h3>
+            <div>
+              <ul class="flexblock clients border">
+              <li style="width: 100%">
+                <a href="#" title="Client">
+                  <figure>
+                      <h3 style="padding: 20px">Network diagram</h3>
+                    <figcaption align="center">
+                      <img src="AWX-design.png">
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>                
+              <li>
+                <a href="#" title="Client">
+                  <figure>
+                      <h3 style="padding: 20px">Hostnames, usage</h3>
+                    <figcaption>
+                      <table>
+                        <tr>
+                          <td>sp-awx-web01</td>
+                          <td>web node, application node (nginx, python, redis uwsgi)</td>
+                        </tr>
+                        <tr>
+                          <td>sp-awx-web02</td>
+                          <td>web node, application node (nginx, python, redis uwsgi)</td>
+                        </tr>
+                        <tr>
+                          <td>sp-awx-db</td>
+                          <td>database node (postgresql)</td>
+                        </tr>                       
+                        <tr>
+                          <td>sp-awx-haproxy</td>
+                          <td>load balancer (haproxy)</td>
+                        </tr>                
+                      </table>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Client">
+                  <figure>
+                      <h3 style="padding: 20px">Configuration</h3>
+                    <figcaption>
+                      <table>
+                        <tr>
+                          <td>Version:</td>
+                          <td>CentOS 7 (64-bit)</td>
+                        </tr>
+                        <tr>
+                          <td>Memory size:</td>
+                          <td>2048 MB</td>
+                        </tr>
+                        <tr>
+                          <td>Processors:</td>
+                          <td>2 vCPU</td>
+                        </tr>                       
+                        <tr>
+                          <td>Disk:</td>
+                          <td>50 GB (dynamically aloc.)</td>
+                        </tr>
+                        <tr>
+                          <td>Network:</td>
+                          <td>1 x bridged adapter</td>
+                        </tr>                   
+                      </table>
+                    </figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+            </div>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=8" >6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</h3>
+            <h4>6.1 Vytvoření obrazu disku</h4>
+			<p>Vytvoříme 4 disky pomocí commandu <code>virt-builder</code>, který stáhne posledni dostupné ISO CentOS a vytoří disk image.</p>
+			<pre>$ virt-builder $OS -o $path-to-disk --size $SIZE --format qcow2 --hostname $HOSTNAME --root-password password:$HESLO --firstboot-command 'jakykoliv command, ktery se spusti pri prvnim bootu'</pre><br>
+<pre>$ for i in $(cat hostnames.txt); do \
+  virt-builder centos-7.8 \
+  -o /kvm/disks/$i.qcow2 \
+  --size 50G \
+  --format qcow2 \ 
+  --hostname $i \
+  --root-password password:redhat \
+  --firstboot-command 'useradd -m -G wheel ansible && echo ansible:redhat | chpasswd'; 
+done</pre>
+          </div>
+          <!-- .end .wrap -->
+			<footer class="bg-white">
+			<!--.wrap o <nav> = container 1200px -->
+			<div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=8" >6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+			</div>
+			</footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</h3>
+            <h4>6.2 Instalace VM</h4>
+      <p>Vytvoříme 4 VMs pomocí commandu <code>virt-install</code>, který vytvoří virtuální servery a přiřadí jim již vytvořené disky z předešláho kroku.</p>
+<pre>$ for i in $(cat hostnames.txt); do \
+  virt-install --name $i \
+  --description '$i' \
+  --ram 2048 \
+  --vcpus 2 \
+  --disk path=/kvm/disks/$i.qcow2 \
+  --import \
+  --os-type linux \
+  --os-variant centos7.0 \
+  --network bridge=virbr0 \
+  --graphics none \
+  --console pty,target_type=serial \
+  --noautoconsole & sleep 5; \
+done</pre>
+          </div>
+          <!-- .end .wrap -->
+      <footer class="bg-white">
+      <!--.wrap o <nav> = container 1200px -->
+      <div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=8" >6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+      </div>
+      </footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</h3>
+            <h4>6.3 Přiřazení IP adres k hostům v inventory</h4>
+      <p>Do každého virtuálního serveru se musíme přihlásit pomocí <code>virsh console</code> a zjistit IP adresy přiřazene DHCP serverem a následně je zapsat do inventory pro náš playbook.</p>
+      <p>Tato aktivita jde automatizovat pomoci statických adres nebo použití kupříkladu orchestračního toolu Terraform.</p>
+<pre>$ virsh console $HOSTNAME</pre>
+          </div>
+          <!-- .end .wrap -->
+      <footer class="bg-white">
+      <!--.wrap o <nav> = container 1200px -->
+      <div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=8" >6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+      </div>
+      </footer>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h3>6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</h3>
+            <h4>6.4 Instalace Ansible AWX</h4>
+<pre>$ ansible-playbook -u ansible -i inventory.yaml --ask-pass --ask-become-pass configure_awx.yaml</pre>
+          </div>
+          <!-- .end .wrap -->
+      <footer class="bg-white">
+      <!--.wrap o <nav> = container 1200px -->
+      <div class="wrap">
+              <p>
+                <span class="alignleft">
+                <a href="#slide=8" >6. Vytvoření 4x VMs a instalace Ansible AWX pomocí playbooku (praktická ukázka)</a>
+                </span>
+                <span class="alignright">
+                    &copy; Ondrej Lipina | TietoEvry.com
+                </span>
+              </p>
+      </div>
+      </footer>
+        </section>
+
+        <section class="slide-bottom">
+          <span class="background" style="background: url('static/images/172970.jpg'); background-size: cover;"></span>
+          <div class="wrap">            
+            <div class="slide-bottom content-left text-serif">
+              <h1><strong>QA?</strong></h1><br><br><br><br><br><br>
+              <h2>
+                <strong>Thanks.</strong>
+              </h2>
+              <p><strong>Ondřej Lipina</strong><br>Senior Service Architect</p> 
+              <p><br> <a href="mailto:ondrej.lipina@tieto.com">ondrej.lipina@tieto.com</a><br><a href="https://www.tietoevry.com/">https://www.tietoevry.com/</a></p>
+            </div>
+            <!-- .end .content-right -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- A global footer
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/webslides/webslides">open source solution</a>, by <a href="https://twitter.com/webslides">@webslides</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
