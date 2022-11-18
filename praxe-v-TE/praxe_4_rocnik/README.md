@@ -1,8 +1,8 @@
 # Workshops for students - 4th grade
 
 ## Documentation
-* [git repo]() <- all materials, labs, examples, etc.
-* [chat]() <- internal chat
+* [git repo](https://github.com/OndraLipo/students-workshops/tree/master/praxe-v-TE/praxe_4_rocnik) <- all materials, labs, examples, etc.
+* [chat]() <- internal chat (TBD)
 
 ## Lab environment
 ### Network
