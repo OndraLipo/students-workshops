@@ -36,14 +36,14 @@ logs:
        firewall-cmd --add-service=http,https --permanent
        firewall-cmd --reload
 
-4. Setup default content
+4. Serve default content
         
        vim /var/www/html/index.html
        <h1>Hello, Ostravo!!!</h1>
 
-5. Add record to our [DNS](dns.md) and add DNS server to laptop
+5. Add record to our [DNS](dns.md) and nameserver to laptop
 
-5. Configure virtual host(s)
+6. Configure virtual host
 
        vim /etc/httpd/conf.d/<fqdn>.conf
        <VirtualHost *:80>
