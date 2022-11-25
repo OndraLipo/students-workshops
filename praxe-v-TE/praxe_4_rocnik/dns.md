@@ -7,6 +7,7 @@ https://www.rosehosting.com/blog/how-to-set-up-private-dns-servers-with-bind-on-
 ```
 packages: bind, bind-utils
 service: named
+ports: 53/tcp, 53/udp
 configs:
     /etc/named.conf
     /var/named/

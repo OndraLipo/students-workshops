@@ -1,35 +1,107 @@
 # Web server
-Install apache, manual
-Start/enable
-vhosts
-secure
-```
-<VirtualHost *:80>
-    ServerName www.example.com
-    Redirect / https://www.example.com/
-</VirtualHost>
 
-<VirtualHost *:443>
-    ServerName www.example.com
-    # ... SSL configuration goes here
-</VirtualHost>
-```
-Generate SSL certificate - self signed
-```
-openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
-  -keyout /etc/pki/evry.test.local.key -out /etc/pki/evry.test.local.cert -subj "/CN=evry.test.local" \
-  -addext "subjectAltName=DNS:evry.test.local,IP:192.168.0.193"
-```
+In this session we will install web server `apache` and configure our VM to serve multiple content for multiple domains on http and https protocol.
+
+## Theory
+
+https://httpd.apache.org/docs/current/
 
 ```
-openssl x509 -in certificate.crt -text -noout
+packages: httpd, httpd-manual, mod_ssl
+service: httpd
+ports: 80, 443
+configs:
+    /etc/httpd/conf/httpd.conf
+    /etc/httpd/conf.d/
+content:
+    /var/www/
+certificates
+    /etc/pki
+logs:
+    /var/log/httpd
 ```
 
-1. Install apache with ssl support
-2. Configure firewall to allow http and https traffic
-3. Create vhost <name>.test.local
-4. Serve content from /var/www/<name>.test.local/web 
-5. Configure vhost to automatically redirect http to https
-6. Generate SSL certificate for domain <name>.test.local
-7. Add A record to your dns configuration for <name>.test.local
-8. Test via curl https://<name>.test.local or via webbrowser
+## Install and configure Apache on RHEL/CentOS/rocky
+
+1. Install apache
+      
+       dnf install httpd, httpd-manual
+
+2. Start and enable apache
+
+       systemctl enable --now httpd
+
+3. Configure firewall
+
+       firewall-cmd --add-service=http,https --permanent
+       firewall-cmd --reload
+
+4. Setup default content
+        
+       vim /var/www/html/index.html
+       <h1>Hello, Ostravo!!!</h1>
+
+5. Add record to our [DNS](dns.md) and add DNS server to laptop
+
+5. Configure virtual host(s)
+
+       vim /etc/httpd/conf.d/<fqdn>.conf
+       <VirtualHost *:80>
+           ServerAdmin webmaster@<fqdn>
+           ServerName <fqdn>
+           DocumentRoot "/var/www/<fqdn>"
+       </VirtualHost>
+
+7. Restart Apache
+
+       systemctl restart httpd
+       systemctl status httpd
+
+8. Testing
+
+       curl 192.168.0.60
+       curl http://www.example.com/manual
+       curl --head http://www.example.com
+       curl -k https://www.example.com
+
+
+### Practice 1
+
+1. Configure 2nd vhost `stahuj.<name>.test.local`
+2. Add the A record to our zone [DNS](dns.md)
+3. Allow listing files for this vhost
+4. Create a txt file in document root called `os-info.txt` with same content as /etc/os-release
+
+## Configure HTTPS 
+1. Install SSL support
+
+       dnf install mod_ssl
+       systemctl restart httpd
+
+2. Generate SSL certificate - self signed
+
+       openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
+        -keyout /etc/pki/<fqdn>.key -out /etc/pki/<fqdn>.cert -subj "/CN=<fqdn>" \
+        -addext "subjectAltName=DNS:<fqdn>,IP:<ip adresa>"
+
+    Show content of certificate in plain text (openssl library):
+       
+       openssl x509 -in certificate.crt -text -noout
+
+3. Configure virtual host for port 443
+
+       <VirtualHost *:443>
+           ServerName www.example.com
+           # ... SSL configuration goes here
+       </VirtualHost>
+    https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html
+
+### Practice 2
+
+1. Create new vhost `secure.<name>.test.local`
+2. Serve content from `/var/www/secure.<name>.test.local/web`
+3. Generate SSL certificate for domain `secure.<name>.test.local`
+4. Add A record to your dns configuration for `secure.<name>.test.local`
+5. Serve content: `H1 tag: "Hello, welcome on secure website secure.<name>.test.local."`, use green background
+6. Configure vhost to automatically redirect http to https
+7. Test via curl `https://secure.<name>.test.local` or via web browser from your laptop
