@@ -41,9 +41,16 @@ logs:
        vim /var/www/html/index.html
        <h1>Hello, Ostravo!!!</h1>
 
-5. Add record to our [DNS](dns.md) and nameserver to laptop
+5. We should have DNS record for our hostname in [DNS](dns.md) zone test.local already, if not add it there.
 
-6. Configure virtual host
+6. Change nameserver on your laptop to point to your VM
+
+       vim /etc/resolv.conf
+       nameserver 192.168.0.X
+       
+       !!! hint: check also nsswitch.conf: change order of dns string on hosts line, put it to third position (before mdns4...)!!!
+
+7. Configure domain based virtual host
 
        vim /etc/httpd/conf.d/<fqdn>.conf
        <VirtualHost *:80>
@@ -52,12 +59,16 @@ logs:
            DocumentRoot "/var/www/<fqdn>"
        </VirtualHost>
 
-7. Restart Apache
+8. Create content in DocumentRoot `/var/www/<fqdn>`
+
+       echo $hostname > /var/www/<fqdn>/index.html
+
+9. Restart Apache
 
        systemctl restart httpd
        systemctl status httpd
 
-8. Testing
+10. Testing
 
        curl 192.168.0.60
        curl http://www.example.com/manual
@@ -68,7 +79,7 @@ logs:
 ### Practice 1
 
 1. Configure 2nd vhost `stahuj.<name>.test.local`
-2. Add the A record to our zone [DNS](dns.md)
+2. Add the A record to our [DNS](dns.md) zone
 3. Allow listing files for this vhost
 4. Create a txt file in document root called `os-info.txt` with same content as /etc/os-release
 
