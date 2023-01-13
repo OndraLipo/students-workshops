@@ -150,7 +150,7 @@ https://www.linuxshelltips.com/mysql-database-commands-cheat-sheet-for-linux/
     | name | varchar(255)
     | email | varchar(128)
     | department | varchar(255)
-    | created | TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    | changed | TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 5. Insert into table `contacts` following people
     | user | name | email | department |
     | --- | --- | --- | --- | 
@@ -167,8 +167,8 @@ https://www.linuxshelltips.com/mysql-database-commands-cheat-sheet-for-linux/
     | id | int NOT NULL AUTO_INCREMENT PRIMARY KEY |
     | name | varchar(255) NOT NULL |
     | description | TEXT
-    | created | TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-2. Insert into table `contacts` following people
+    | changed | TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+2. Insert into table `departments` following people
     | name | description |
     | --- | --- | 
     | HR | Human Resources |
