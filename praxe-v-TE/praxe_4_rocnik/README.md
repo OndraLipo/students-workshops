@@ -2,7 +2,10 @@
 
 ## Documentation
 * [git repo](https://github.com/OndraLipo/students-workshops/tree/master/praxe-v-TE/praxe_4_rocnik) <- all materials, labs, examples, etc.
-* [chat]() <- internal chat (TBD)
+* chat: Open terminal and type
+    ```
+    nc 192.168.0.160 1234
+    ```
 
 ## Lab environment
 ### Network
@@ -36,4 +39,5 @@
 * [Web server](apache.md) - Publish a content via web server
 * [DB server](mysql.md) - Configure MySQL database server
 * [Shell scripting](shell-scripting.md) - Learn basics of shell scripting
+* [Last steps](last-steps.md) - Last steps
 
