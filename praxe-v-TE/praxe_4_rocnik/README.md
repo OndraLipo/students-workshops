@@ -4,6 +4,7 @@
 * [git repo](https://github.com/OndraLipo/students-workshops/tree/master/praxe-v-TE/praxe_4_rocnik) <- all materials, labs, examples, etc.
 * chat: Open terminal and type
     ```
+    dnf install nc
     nc 192.168.0.160 1234
     ```
 
