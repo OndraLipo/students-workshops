@@ -107,7 +107,7 @@ https://cs.wikipedia.org/wiki/Server
 ### Use case: 
 1. Create 4 empty VMs with some predefined configuration. Apply hardenings.
 2. Deploy 1 loadbalancer
-3. Deploy application appka.pojfm.loczl to 3 nodes
+3. Deploy application appka.pojfm.local to 3 nodes
 4. Access the app, test LB, reboots
 5. Modify -> rerun configs
 
