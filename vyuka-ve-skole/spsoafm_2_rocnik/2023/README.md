@@ -90,26 +90,30 @@ https://cs.wikipedia.org/wiki/Server
 ### Infrastructure as a code
 - Připravím si definice VMs
 - Vyrobím/zruším 1 nebo X serverů jedním commandem pomocí moderních nástrojů:
-    - terraform
-    - cloud-init
-    - packer
+    - [terraform](https://en.wikipedia.org/wiki/Terraform_(software))
+    - [cloud-init](https://cloudinit.readthedocs.io/en/latest/tutorial/qemu.html)
+    - [packer](https://www.packer.io)
 - Vše spravuji v kódu, nepíši nikde žádne příkazy, neklikám v GUI
 
 ### Configuration management
 - není moderní opravovat věci, je jednodušší server smazat a vyrobit znovu (musím k tomu mít konfigurace)
+    - [ansible](https://www.ansible.com)
+    - [salt](https://saltproject.io)
 - existují vyjímky 
 - mit důležité věci, hardeningy, configy verzované někde u sebe (např. GIT)
 
 ***
 
 ## 6. Praktická ukázka
-
-### Use case: 
 1. Create 4 empty VMs with some predefined configuration. Apply hardenings.
 2. Deploy 1 loadbalancer
 3. Deploy application appka.pojfm.local to 3 nodes
 4. Access the app, test LB, reboots
 5. Modify -> rerun configs
+
+<p align="center">
+  <img width="460" height="300" src="demo.png">
+</p>
 
 ***
 
