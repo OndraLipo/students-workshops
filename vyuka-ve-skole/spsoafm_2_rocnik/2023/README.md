@@ -26,14 +26,14 @@
 ### O mně
 - 4 roky v Tietoevry
 - 5 let v OKIN BPS
-- 10+ let praxe s UNIXem
+- 15+ let praxe s UNIXem
 
 ### Team - Server Management Linux Operations
-- spravujeme cca 7000 UNIX serverů
+- spravujeme cca 6000 UNIX serverů
 - okolo 40 lidí v T2 a T3
 - 80% RedHat, SUSE, (Oracle Linux)
 - 20% HP-UX, Solaris, AIX
-- cca. 250 fyzických serverů
+- cca. 250 fyzických Linux serverů
 - virtuální platformy: vmware, hyper-v, proxmox, public-cloudy
 
 ***
@@ -81,7 +81,7 @@ https://cs.wikipedia.org/wiki/Server
 - Síťové úložiště (SMB)
 - DNS server
 - DHCP server
-- DNS server
+- IIS server
 
 ***
 
