@@ -10,9 +10,9 @@
 
 ## Lab environment
 ### Internal network
-- Subnet: `10.0.5.0/24`
+- Subnet: `192.168.0.0/24`
 - DHCP: `YES`
-- GW: `10.0.5.1`
+- GW: `192.168.0.1`
 - DNS: `9.9.9.9, 8.8.8.8`
 
 ~~### WIFI settings~~
