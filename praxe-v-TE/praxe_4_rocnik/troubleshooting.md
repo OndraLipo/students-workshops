@@ -14,10 +14,12 @@
    7. selinux fcontext must be fixed for key file
    
 ## 2. Permissions
-1. Create folder /management owned by petr:management, user petr can write/read/execute. 
+1. Create folder /management owned by petr:management, user petr can write/read/execute, others have no rights. 
+2. Create user jana, she is member of management group and can create files in /management folder.
+3. Create user pepa, who id not part of management group and also can create files in /management foler.
 
 ## 3. Secure SSH configuration
-1. Change ssh port from **22** to **2222**  
+1. Change ssh port from **22** to **2222**   
 
 ## 4. Services and processes
 1. You received a ticket, that folder /var/log is getting full. Investigate, what is taking space, and decide, if extend space, or clear.
