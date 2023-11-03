@@ -16,30 +16,33 @@
 ## 2. Permissions
 1. Create folder /management owned by petr:management, user petr can write/read/execute, others have no rights. 
 2. Create user jana, she is member of management group and can create files in /management folder.
-3. Create user pepa, who id not part of management group and also can create files in /management foler.
+3. Create user pepa, who is not part of management group and also can create files in /management foler.
 
 ## 3. Secure SSH configuration
 1. Change ssh port from **22** to **2222**   
 
 ## 4. Services and processes
-1. You received a ticket, that folder /var/log is getting full. Investigate, what is taking space, and decide, if extend space, or clear.
+1. You received a ticket, that file system /var/ is getting full. Investigate, what is taking space, and decide, if extend space, or clear.
 
 2. Discover what is consuming memory
 
 ## 5. Find 
 1. Find all files in */var/cache* larger then **1MB**. Show the size in human readable form and sort them from largest to smallest. 
-2. Return a path of file(s) with content: **Ostrava**
-3. Find all files smaller then 10MB and larger then 10KB and count them
-4. Find all hidden files and copy them to /tmp/hidden/
-5. Find all files with permissions **rw-rw----**
-6. Find all files changed during last 1 hour
+2. Find all files smaller then 10MB and larger then 10KB and count them
+3. Find all hidden files and copy them to /tmp/hidden/
+4. Find all files with permissions **rw-rw----**
+5. Find all files changed during last 1 hour
+6. Return a path of file(s) with content: **Ostrava**
 
 
 ## 6. Logrotate
+### Exercise:
 1. create logrotate script for /var/log/error.log - so it rotates daily, appends date, keep 2 copies, compress
 
-advanced use
-copytruncate
+### Lab:
+2. Create logrotate config for /var/log/friday.log - rotates on size of 5k, append date and time (231103-151010), compress, keep 5 copies
+
+advanced use copytruncate
 
 ## 5. Archivation/Backup 
 1. Configure weekly full backup of folder /faktury. (Archive all data in folder /faktury and backup to 192.168.0.120:/nfs_share/<yourname>/faktury_full).
