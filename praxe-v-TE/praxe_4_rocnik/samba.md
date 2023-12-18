@@ -3,6 +3,16 @@
 ## Links
 https://www.tecmint.com/install-samba-rhel-rocky-linux-and-almalinux/
 
+## Theory
+```
+packages: samba, samba-common, samba-client
+service: smb.service
+ports: 445/tcp, 139/tcp
+configs:
+    /etc/samba/smb.conf
+    /etc/fstab
+```
+
 ## Practice
 
 1. Create a samba share folder **/samba_nobody** on your VM and mount it on you workstation. Accessible for anyone.

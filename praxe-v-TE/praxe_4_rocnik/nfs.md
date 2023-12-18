@@ -14,7 +14,15 @@ configs:
     /etc/fstab
 ```
 
-## Practice
+## Practice 1
+1. Create pair
+2. On server create folder /prokamose
+3. On server export NFS just for IP addresss of your colleague and allow writing
+4. On client create folder <name of your colleague>
+5. On client mount the exported folder to <name of your colleague>
+6. Crate some files there
+
+## Practice 2
 1. Find out which folder is being exported from 192.168.0.185 and mount it persistently under /mnt/nfs
 2. Create txt file named after your hostname in /faktury
 3. Configure daily full backup at 9 of folder /faktury. (Archive all data in folder /faktury and backup to 192.168.0.185:/nfs_share/<yourname>/faktury_full).
