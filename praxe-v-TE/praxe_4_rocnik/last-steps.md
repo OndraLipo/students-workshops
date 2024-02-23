@@ -4,7 +4,7 @@
 
 2. Deny SSH access for user `root`
 
-3. On disk vdb create physical volume and volume group: `data`. In this volume group create logical volume: `foto` with size 500MB, create ext4 filesystem and mount it persistently to /foto.
+3. On disk sdc create physical volume and volume group: `data`. In this volume group create logical volume: `foto` with size 500MB, create ext4 filesystem and mount it persistently to /foto.
 
 4. Extend logical volume `foto` to 650MB
 
