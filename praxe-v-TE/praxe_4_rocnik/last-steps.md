@@ -37,7 +37,7 @@
 
 16. User `master` can manage DB `frydek` 
 
-17. Create table `uciele` with 6 columns:
+17. Create table `ucitele` with 6 columns:
     | column name | parameters |
     | --- | --- |
     | id | int NOT NULL AUTO_INCREMENT PRIMARY KEY |
