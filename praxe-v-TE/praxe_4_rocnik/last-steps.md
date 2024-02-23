@@ -8,9 +8,9 @@
 
 4. Extend logical volume `foto` to 650MB
 
-5. Export folder `/foto` as NFS share in read, write mode. Mount it to your ~~workstation~~ server.
+5. Export folder `/foto` as NFS share in read, write mode. Mount it to your 1st server ~~workstation~~.
 
-6. Create a samba share folder `/filmy` and mount it on your ~~workstation~~ server. Accessible for anyone.
+6. Create a samba share folder `/filmy` and mount it on your 1st server ~~workstation~~. Accessible for anyone.
 
 ~~7. Create DNS server and forward zone `ostrava.com`~~
 
@@ -29,15 +29,15 @@
 
 12. Serve content: `H1 tag: "Hello, welcome on secure website www.ostrava.com."`, use yellow background
 
-~~13. Install maridadb~~
+13. Install maridadb
 
-~~14. Create database `frydek`~~
+4. Create database `frydek`
 
-~~15. Create user `master`, the user can login from any location~~
+15. Create user `master`, the user can login from any location
 
-~~16. User `master` can manage DB `frydek` ~~
+16. User `master` can manage DB `frydek` 
 
-~~17. Create table `uciele` with 6 columns:~~
+17. Create table `uciele` with 6 columns:
     | column name | parameters |
     | --- | --- |
     | id | int NOT NULL AUTO_INCREMENT PRIMARY KEY |
