@@ -47,4 +47,4 @@
     | class | varchar(255)
     | changed | TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 
-18. Create a shell script that gets 2 numbers from stdin and print *,+,-,/. (optional)
+18. Create a shell script in home folder called `math.sh` that gets 2 numbers from stdin and print *,+,-,/. (optional)
