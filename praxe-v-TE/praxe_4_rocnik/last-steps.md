@@ -33,7 +33,7 @@
 
 4. Create database `frydek`
 
-15. Create user `master`, the user can login from any location
+15. Create user: `master` with password: `master123`, the user can login from any location
 
 16. User `master` can manage DB `frydek` 
 
