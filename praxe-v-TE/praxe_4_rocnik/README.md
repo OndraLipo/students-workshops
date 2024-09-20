@@ -9,6 +9,9 @@
     ```
 
 ## Lab environment
+### Server IP
+- 172.20.4.250
+
 ### Internal network
 - Subnet: `172.20.4.0/24`
 - DHCP: `YES`
