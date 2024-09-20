@@ -10,9 +10,9 @@
 
 ## Lab environment
 ### Internal network
-- Subnet: `192.168.0.0/24`
+- Subnet: `172.20.4.0/24`
 - DHCP: `YES`
-- GW: `192.168.0.1`
+- GW: `192.20.4.1`
 - DNS: `9.9.9.9, 8.8.8.8`
 
 ~~### WIFI settings~~
@@ -21,10 +21,10 @@
 ~~| LabLinux2_5G | `JurassicPark2021!` |~~
 
 ### Default VM credentials
-| user | password | comment |
-| --- | --- | --- |
+~~| user | password | comment |~~
+~~| --- | --- | --- |~~
 | student | `Student!@#123` | sudo ALL:NOPASSWD |
-| root | disabled | ssh login disabled |
+~~| root | disabled | ssh login disabled |~~
 
 ---
 
