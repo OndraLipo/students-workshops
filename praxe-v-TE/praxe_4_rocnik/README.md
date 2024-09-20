@@ -24,8 +24,9 @@
 ~~| LabLinux2_5G | `JurassicPark2021!` |~~
 
 ### Default VM credentials
-~~| user | password | comment |~~
-~~| --- | --- | --- |~~
+| user | password | comment |
+| --- | --- | --- |
+| <last name> | redhat | N/A|
 | student | `Student!@#123` | sudo ALL:NOPASSWD |
 ~~| root | disabled | ssh login disabled |~~
 
