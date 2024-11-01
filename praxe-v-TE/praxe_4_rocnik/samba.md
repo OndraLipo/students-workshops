@@ -1,7 +1,8 @@
 # SAMBA
 
 ## Links
-https://docs.rockylinux.org/guides/file_sharing/samba_file_share/
+- https://www.tecmint.com/install-samba-rhel-rocky-linux-and-almalinux/
+- https://docs.rockylinux.org/guides/file_sharing/samba_file_share/
 
 ## Theory
 ```
@@ -22,6 +23,13 @@ configs:
 Hints how to mount on client:
 <details>
 
+Windows:
+```
+net use X: /user:smbuser \\SERVER\Share
+net use X: /delete
+```
+
+Linux:
 ```
 smbclient '//192.168.0.160/samba_private' -U smbuser
 
