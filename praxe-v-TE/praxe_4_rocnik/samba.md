@@ -1,7 +1,7 @@
 # SAMBA
 
 ## Links
-https://www.tecmint.com/install-samba-rhel-rocky-linux-and-almalinux/
+https://docs.rockylinux.org/guides/file_sharing/samba_file_share/
 
 ## Theory
 ```
