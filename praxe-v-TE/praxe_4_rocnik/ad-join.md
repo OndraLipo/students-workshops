@@ -3,6 +3,13 @@
 ## Theory
 https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/faq/ad-terms/
 
+Abreviations:
+```
+AD - Active Directory
+OU - Organizational Unit
+DC - domain or domain controler
+```
+
 ## AD Join only (common work)
 0. Create snapshot of VM
 1. Install needful packages: 
@@ -14,7 +21,7 @@ https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/
     - user: **svcjoin**
     - pass: **Student1**
     ```
-    $ ldapsearch -x -h 192.168.122.237 -p 389 -D "svcjoin@test.local" -W -b "ou=PROD,dc=test,dc=local" cn
+    $ ldapsearch -x -h <AD IP> -p 389 -D "svcjoin@test.local" -W -b "ou=PROD,dc=test,dc=local" cn
     ```
 4. Join client to AD
     ```
@@ -98,7 +105,7 @@ https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/
 2. Add AD server as your DNS server (just temporarily by editing `/etc/resolv.conf`, comment all other nameservers if present)
 3. Test connectivity to AD
     ```
-    $ ldapsearch -x -h 192.168.122.237 -p 389 -D "svcjoin@test.local" -W -b "ou=LAB,dc=test,dc=local" cn
+    $ ldapsearch -x -h <AD IP> -p 389 -D "svcjoin@test.local" -W -b "ou=LAB,dc=test,dc=local" cn
     ```
 4. Join client to AD
     ```
