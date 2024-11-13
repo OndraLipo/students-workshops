@@ -1,24 +1,122 @@
 # AD join
-1. install following packages sssd realmd samba-common krb5-workstation oddjob oddjob-mkhomedir adcli
-2. add AD server as your DNS server (just temporarily by editing /etc/resolv.conf, delete other nameservers if present)
-3. on AD side create some account capable of joining to domain, create some OU and make this account owner of OU
-4. realm join -U svcjoin TEST.LOCAL --computer-ou="OU=REDHAT,OU=SERVERS,DC=TEST,DC=LOCAL" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
-hostname will be then the name in AD
-5. review /etc/sssd/sssd.conf and realm list
-6. permit or deny users or groups
-realm permit -g group
-7. define sudoers group
-8. edit sssd config and decide if you want fully qualified names or short names and homedir
-use_fully_qualified_names = True
-fallback_homedir = /home/%u@%d > this changes how to check users and login from # id user@domain.com to # id user
 
-to do:
+## Theory
+https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/faq/ad-terms/
 
-1. join your VM to AD domain TEST.LCAL using account svcjoin and passwd Student1, IP of this server is: 192.168.0.128
-```
-realm join -U svcjoin TEST.LOCAL --computer-ou="OU=REDHAT,OU=LINUX,DC=TEST,DC=LOCAL" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
-```
-2. test that you are able to see user svcjoin in AD (check by id command)
-3. change settings so you dont have to use FQN for users, and so their home directories also are short
-4. make it so all users from group "linuxadmins" will be permitted to log in and use sudo, users from "linuxusers" will only be able to login without sudo
-5. then try to login as svcjoin - this should fail, and then try to log in as veseljan user, who should be able to use also sudo - test it, and then login as smutnmar, who is just linuxuser so he should be not able to use sudo, test it and test also by command id if you see their correct groups, test also if homedir was correctly created as short name. These will be created by me on AD side, passwd will be Student1
+## AD Join only (common work)
+0. Create snapshot of VM
+1. Install needful packages: 
+    ```
+    $ dnf install openldap-clients sssd realmd samba-common krb5-workstation oddjob oddjob-mkhomedir adcli
+    ```
+2. Add AD server as your DNS server (just temporarily by editing `/etc/resolv.conf`, comment all other nameservers if present)
+3. Test connectivity to AD
+    - user: **svcjoin**
+    - pass: **Student1**
+    ```
+    $ ldapsearch -x -h 192.168.122.237 -p 389 -D "svcjoin@test.local" -W -b "ou=PROD,dc=test,dc=local" cn
+    ```
+4. Join client to AD
+    ```
+    $ realm join -U svcjoin TEST.LOCAL --computer-ou="ou=Servers,ou=PROD,dc=test,dc=local" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
+    ```
+5. Review `/etc/sssd/sssd.conf` and comand `realm list`
+6. Review `sssd` service and command `sss_cache`
+
+### Configure access for users and groups
+1. Permit or deny users or groups
+    ```
+    $ realm permit -g <group1>
+    $ realm permit -g linuxusers
+    ```
+3. Test access
+    ```
+    ssh -l pepa@test.local <ip>
+    ssh -l svcjoin@test.local <ip>
+    $ id pepa@test.local
+    ```
+4. Edit sssd config and decide if you want fully qualified names or short names 
+    | parameter | user login |
+    | --- | --- |
+    | use_fully_qualified_names = True | user@domain.ltd |
+    | use_fully_qualified_names = False | user |
+    | fallback_homedir = /home/%u@%d | /home/user@domain.ltd |
+    | fallback_homedir = /home/%u | /home/user |
+
+
+## Steps to be done on Windows AD server (practice)
+### 1. Preparation
+1. Create new VM
+
+    ![ad-vm-create](./ad-join-files/ad-vm-create.png)
+2. Modify network of VM
+
+    ![network](./ad-join-files/network.png)
+3. Install Win 2022
+
+    ![ad-win-install](./ad-join-files/ad-win-install.png)
+4. Enable RDP
+
+    ![ad-enable-rdp](./ad-join-files/ad-enable-rdp.png)
+5. Get an IP and connect via RDP
+
+### 2. Install AD role 
+1. Enable AD feature
+    - Follow: https://www.turbogeek.co.uk/how-to-install-active-directory-on-windows-server-2022/
+    - Setup domain: `<lastname>.local`
+    - The server will reboot
+2. Enable Advanced Features in Active Directory Users and Computers
+
+    ![advanced-features](./ad-join-files/advanced-features.png)
+    
+
+### 3. Create AD content
+1. Create user `svcjoin` with password `Student1` in top level domain: `Users`. Set only "Password never expires"
+    ![svcjoin](./ad-join-files/svcjoin-details.png)
+2. Create OU=`LAB`
+3. Create OU=`Servers` and OU=`Users` under `LAB`
+5. Add permissions for `svcjoin` to create/delete computers in OU `LAB`
+
+    ![svcjoin-perms1](./ad-join-files/svcjoin-perms1.png)
+    ![svcjoin-perms2](./ad-join-files/svcjoin-perms2.png)
+    ![svcjoin-perms3](./ad-join-files/svcjoin-perms3.png)
+    ![svcjoin-perms4](./ad-join-files/svcjoin-perms4.png)
+6. Create 2 groups in `OU=LAB,OU=Users`
+    - `linuxadmins`
+    - `linuxusers`
+7. Create 2 users `OU=LAB,OU=Users`:
+    - `admin1` with password `Redhat123`, member of `linuxadmins`
+    - `user1` with password `Redhat123`, member of `linuxusers`
+
+## Steps on the client linux server (practice)
+### Join to AD
+0. Revert snapshot
+1. Install needful packages: 
+    ```
+    $ dnf install openldap-clients sssd realmd samba-common krb5-workstation oddjob oddjob-mkhomedir adcli
+    ```
+2. Add AD server as your DNS server (just temporarily by editing `/etc/resolv.conf`, comment all other nameservers if present)
+3. Test connectivity to AD
+    ```
+    $ ldapsearch -x -h 192.168.122.237 -p 389 -D "svcjoin@test.local" -W -b "ou=LAB,dc=test,dc=local" cn
+    ```
+4. Join client to AD
+    ```
+    $ realm join -U svcjoin TEST.LOCAL --computer-ou="ou=Servers,ou=LAB,dc=test,dc=local" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
+    ```
+5. Review `/etc/sssd/sssd.conf` and comand `realm list`
+
+### Configure access for users and groups
+1. Permit or deny users or groups
+    ```
+    $ realm permit -g <group1> <group2>
+    $ realm permit -g linuxadmins linuxusers
+    ```
+2. Allow sudo access for group `linuxadmins@test.local` (utilize config in sudoers.d folder) 
+3. Test access
+    ```
+    id user1@test.local
+    ssh -l user1@test.local <ip>
+    ssh -l admin1@test.local <ip>, try to switch to root via sudo
+    ```
+4. Change configuration of sssd so you do not have to write full domain for users
