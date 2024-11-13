@@ -4,11 +4,11 @@
 https://itconnect.uw.edu/tools-services-support/it-systems-infrastructure/msinf/other-help/faq/ad-terms/
 
 Abreviations:
-```
-AD - Active Directory
-OU - Organizational Unit
-DC - domain or domain controler
-```
+
+- AD - Active Directory
+- OU - Organizational Unit
+- DC - domain or domain controler
+
 
 ## AD Join only (common work)
 0. Create snapshot of VM
