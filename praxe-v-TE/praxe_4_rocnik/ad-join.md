@@ -11,7 +11,7 @@ Abreviations:
 
 
 ## AD Join only (common work)
-0. Create snapshot of VM
+0. Create snapshot of VM - REMOVE THE ISO!!!!!!
 1. Install needful packages: 
     ```
     $ dnf install openldap-clients sssd realmd samba-common krb5-workstation oddjob oddjob-mkhomedir adcli
@@ -31,18 +31,18 @@ Abreviations:
 6. Review `sssd` service and command `sss_cache`
 
 ### Configure access for users and groups
-1. Permit or deny users or groups
-    ```
-    $ realm permit -g <group1>
-    $ realm permit -g linuxusers
-    ```
-3. Test access
+1. Test access
     ```
     ssh -l pepa@test.local <ip> (password: Student1)
     ssh -l svcjoin@test.local <ip>
     $ id pepa@test.local
     ```
-4. Edit sssd config and decide if you want fully qualified names or short names 
+2. Permit or deny users or groups
+    ```
+    $ realm permit -g <group1>
+    $ realm permit -g linuxusers
+    ```
+3. Edit sssd config and decide if you want fully qualified names or short names 
     | parameter | user login |
     | --- | --- |
     | use_fully_qualified_names = True | user@domain.ltd |
