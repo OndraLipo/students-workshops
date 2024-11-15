@@ -104,12 +104,14 @@ Abreviations:
     ```
 2. Add AD server as your DNS server (just temporarily by editing `/etc/resolv.conf`, comment all other nameservers if present)
 3. Test connectivity to AD
+    - Replace thing in `<>` accordingly to your setup, remove `<>`.
     ```
-    $ ldapsearch -x -h <AD IP> -p 389 -D "svcjoin@test.local" -W -b "ou=LAB,dc=test,dc=local" cn
+    $ ldapsearch -x -h <AD IP> -p 389 -D "svcjoin@<your domain>" -W -b "ou=LAB,dc=test,dc=local" cn
     ```
 4. Join client to AD
+    - Replace thing in <> accordingly to your setup, remove <>.
     ```
-    $ realm join -U svcjoin TEST.LOCAL --computer-ou="ou=Servers,ou=LAB,dc=test,dc=local" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
+    $ realm join -U svcjoin <your domain> --computer-ou="ou=Servers,ou=LAB,dc=<domain>,dc=<ltd>" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
     ```
 5. Review `/etc/sssd/sssd.conf` and comand `realm list`
 
@@ -119,11 +121,11 @@ Abreviations:
     $ realm permit -g <group1> <group2>
     $ realm permit -g linuxadmins linuxusers
     ```
-2. Allow sudo access for group `linuxadmins@test.local` (utilize config in sudoers.d folder) 
+2. Allow sudo access for group `linuxadmins@<your domain>` (utilize config in sudoers.d folder) 
 3. Test access
     ```
-    id user1@test.local
-    ssh -l user1@test.local <ip>
-    ssh -l admin1@test.local <ip>, try to switch to root via sudo
+    id user1@<your domain>
+    ssh -l user1@<your domain> <ip>
+    ssh -l admin1@<your domain> <ip>, try to switch to root via sudo
     ```
 4. Change configuration of sssd so you do not have to write full domain for users
