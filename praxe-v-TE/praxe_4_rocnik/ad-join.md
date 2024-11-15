@@ -21,11 +21,11 @@ Abreviations:
     - user: **svcjoin**
     - pass: **Student1**
     ```
-    $ ldapsearch -x -h <AD IP> -p 389 -D "svcjoin@test.local" -W -b "ou=PROD,dc=test,dc=local" cn
+    $ ldapsearch -x -h 172.20.4.29 -p 389 -D "svcjoin@test.local" -W -b "ou=PROD,dc=test,dc=local" cn
     ```
 4. Join client to AD
     ```
-    $ realm join -U svcjoin TEST.LOCAL --computer-ou="ou=Servers,ou=PROD,dc=test,dc=local" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
+    $ realm join -U svcjoin TEST.LOCAL --computer-ou="ou=Systems,ou=PROD,dc=test,dc=local" --os-name="`uname -o`" --os-version="`uname -rsv`" --verbose
     ```
 5. Review `/etc/sssd/sssd.conf` and comand `realm list`
 6. Review `sssd` service and command `sss_cache`
@@ -38,7 +38,7 @@ Abreviations:
     ```
 3. Test access
     ```
-    ssh -l pepa@test.local <ip>
+    ssh -l pepa@test.local <ip> (password: Student1)
     ssh -l svcjoin@test.local <ip>
     $ id pepa@test.local
     ```
