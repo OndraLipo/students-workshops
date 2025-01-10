@@ -25,7 +25,7 @@ logs:
 
 1. Install apache
       
-       dnf install httpd, httpd-manual
+       dnf install httpd httpd-manual
 
 2. Start and enable apache
 
@@ -33,7 +33,7 @@ logs:
 
 3. Configure firewall
 
-       firewall-cmd --add-service=http,https --permanent
+       firewall-cmd --add-service={http,https} --permanent
        firewall-cmd --reload
 
 4. Serve default content
@@ -61,7 +61,7 @@ logs:
 
 8. Create content in DocumentRoot `/var/www/<fqdn>`
 
-       echo $hostname > /var/www/<fqdn>/index.html
+       echo $(hostname) > /var/www/<fqdn>/index.html
 
 9. Restart Apache
 
