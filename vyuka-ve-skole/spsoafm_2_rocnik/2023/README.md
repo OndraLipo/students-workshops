@@ -36,6 +36,7 @@
 - 20% HP-UX, Solaris, AIX
 - cca. 250 fyzických Linux serverů
 - virtuální platformy: vmware, hyper-v, proxmox, public-cloudy
+- HPC - High Performance Computing
 
 ***
 
@@ -72,6 +73,7 @@ https://cs.wikipedia.org/wiki/Server
 - Vývojové prostředí (Vagrant)
 - Síťový prvek (router, firewall)
 - Automatizační nástroj (Ansible, Salt)
+- AI compuete node
 
 ***
 
