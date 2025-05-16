@@ -22,14 +22,15 @@
 ### Tietoevry
 - Tietoevry má hlavní sídlo ve Finsku a zaměstnává téměř 24 000 expertů v desítkách zemí.
 - https://www.tietoevry.com/en/about-us/our-company/
+- https://www.tietoevry.com/en/newsroom/all-news-and-releases/stock-exchange-releases/25/03/inside-information-tietoevry-to-sell-its-tech-services-business-to-funds-advised-by-agilitas-private-equity-llp-for-eur/
 
 ### O mně
-- 4 roky v Tietoevry
+- 6 let v Tietoevry
 - 5 let v OKIN BPS
 - 15+ let praxe s UNIXem
 
 ### Team - Server Management Linux Operations
-- spravujeme cca 6000 UNIX serverů
+- spravujeme cca 4500 UNIX serverů
 - okolo 40 lidí v T2 a T3
 - 80% RedHat, SUSE, (Oracle Linux)
 - 20% HP-UX, Solaris, AIX
@@ -109,7 +110,8 @@ https://cs.wikipedia.org/wiki/Server
 2. Deploy 1 loadbalancer
 3. Deploy application appka.pojfm.local to 3 nodes
 4. Access the app, test LB, reboots
-5. Modify -> rerun configs
+5. Patching
+6. Modify -> rerun configs
 
 <p align="center">
   <img width="460" height="300" src="demo.png">
