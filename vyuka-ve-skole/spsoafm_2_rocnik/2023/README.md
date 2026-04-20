@@ -19,23 +19,24 @@
 ***
 
 ## 1. Pár slov o firmě, mne a teamu
-### Tietoevry
-- Tietoevry má hlavní sídlo ve Finsku a zaměstnává téměř 24 000 expertů v desítkách zemí.
-- https://www.tietoevry.com/en/about-us/our-company/
-- https://www.tietoevry.com/en/newsroom/all-news-and-releases/stock-exchange-releases/25/03/inside-information-tietoevry-to-sell-its-tech-services-business-to-funds-advised-by-agilitas-private-equity-llp-for-eur/
+### Vivicta (původně Tietoevry)
+- Vivicta má hlavní sídlo ve Finsku a zaměstnává téměř 7 000 expertů v desítkách zemí.
+- Služby: Data, Automation & AI, Cloud & Infrastructure, ERP & Applications a Digital Security
+- https://www.vivicta.com/en/about-us/ 
 
 ### O mně
-- 6 let v Tietoevry
+- Ondrej Lipina (Service Architect)
+- 7 let ve Vivicta/Tietoevry
 - 5 let v OKIN BPS
 - 15+ let praxe s UNIXem
 
 ### Team - Server Management Linux Operations
-- spravujeme cca 4500 UNIX serverů
+- spravujeme cca 4000 UNIX serverů
 - okolo 40 lidí v T2 a T3
-- 80% RedHat, SUSE, (Oracle Linux)
+- 80% RedHat, SUSE, Ubuntu, (Oracle Linux)
 - 20% HP-UX, Solaris, AIX
 - cca. 250 fyzických Linux serverů
-- virtuální platformy: vmware, hyper-v, proxmox, public-cloudy
+- virtuální platformy: vmware, hyper-v, kvm, proxmox, public-cloudy
 - HPC - High Performance Computing
 
 ***
@@ -62,7 +63,6 @@ https://cs.wikipedia.org/wiki/Server
 
 ## 3. Nejčastější využití Linuxového serveru
 
-- Development system
 - Webový server (apache, nginx)
 - Databázový server (Oracle, Mysql, DB2, MariaDB, psql)
 - Aplikační server (php, java, python, C++)
@@ -74,6 +74,7 @@ https://cs.wikipedia.org/wiki/Server
 - Síťový prvek (router, firewall)
 - Automatizační nástroj (Ansible, Salt)
 - AI compuete node
+- Development system
 
 ***
 
