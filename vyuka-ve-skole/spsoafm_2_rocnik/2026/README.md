@@ -3,6 +3,10 @@
 ## The design
 We have a high utilized web application with load balancer.
 
+<p align="center">
+  <img width="460" height="300" src="../2023/demo.png">
+</p>
+
 - `lb.<user>.local` (loadbalancer to balance traffic to the application nodes)
 - `app[1-X].<user>.local` (unlimited number of application nodes containing same app content)
 
