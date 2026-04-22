@@ -137,3 +137,8 @@ vim playbooks/templates/appka/index.html.j2
 ```
 ansible-playbook -i inventory.ini playbooks/deploy-applicaton-main.yml
 ```
+### 6. Cleanup
+```
+cd ~/terraform
+terraform destroy
+```
