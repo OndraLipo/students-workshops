@@ -33,8 +33,9 @@ virsh console <domain> (Ctrl + ])
 cd terraform
 cat main.tf
 ```
-### 1. Plan and apply the configuration
+### 1. Inicialize, plan and apply the configuration
 ```
+terraform init
 terraform plan
 terraform apply
 ```
