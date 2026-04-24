@@ -12,7 +12,7 @@ We have a high utilized web application with load balancer.
 
 ## Login to kvm host
 ```
-ssh <user>@10.0.2.105
+ssh <user>@10.0.10.118
 ```
 password: `redhat`
 
